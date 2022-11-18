@@ -1,0 +1,2429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".detallesRutina"
+    android:id="@+id/contentDR">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="192dp"
+            android:layout_weight="28"
+            android:id="@+id/miidnegro"
+            android:background="@color/black" >
+
+            <TextView
+                android:id="@+id/nombreRutinaDR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="135dp"
+                android:layout_marginStart="25dp"
+                android:enabled="false"
+                android:text="Titulo"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/black"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+            android:id="@+id/NivelRutinaDR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="135dp"
+            android:layout_marginStart="85dp"
+            android:enabled="false"
+            android:text="Titulo"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/miidnegro"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/vvvRutina"
+                    android:layout_width="61dp"
+                    android:layout_height="66dp"
+                    android:text="f"
+                    android:enabled="false"
+                    android:visibility="gone"
+                    android:textSize="35dp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txtDiaLunesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lunes:"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/txtParteTrabajarDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Abdominales"
+                    android:layout_marginStart="85dp"
+                    android:layout_alignLeft="@+id/txtDiaLunesDR"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/txtSeriesLunesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Series:"
+                    android:layout_marginStart="100dp"
+                    android:layout_alignLeft="@+id/txtParteTrabajarDR"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:id="@+id/idSeriesLunesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  25"
+                    android:layout_marginStart="45dp"
+                    android:layout_alignLeft="@+id/txtSeriesLunesDR"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/txtnombreEjercicioLunesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:textStyle="italic"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/txtDiaLunesDR"
+                    android:text="Ejercicio:"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:id="@+id/txtRepeticionesLunesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txtnombreEjercicioLunesDR"
+                    android:layout_below="@+id/txtDiaLunesDR"
+                    android:layout_marginStart="125dp"
+                    android:clickable="true"
+                    android:textStyle="italic"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Repeticiones:"
+                    android:textColor="@color/black"/>
+
+
+                <TextView
+                    android:id="@+id/txtPesoLunesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txtRepeticionesLunesDR"
+                    android:layout_below="@+id/txtDiaLunesDR"
+                    android:layout_marginStart="95dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:textStyle="italic"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:text="Peso:"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/txtMaquinaLunesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txtPesoLunesDR"
+                    android:layout_below="@+id/txtDiaLunesDR"
+                    android:layout_marginStart="75dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:textStyle="italic"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:text="Máquina:"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idEjercicio1L"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_below="@+id/txtnombreEjercicioLunesDR"
+                    android:text="Tiroenpolea"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/idRepeticiones1L"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idEjercicio1L"
+                    android:layout_below="@+id/txtnombreEjercicioLunesDR"
+                    android:layout_marginStart="155dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/idPeso1L"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idRepeticiones1L"
+                    android:layout_below="@+id/txtPesoLunesDR"
+                    android:layout_marginStart="70dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idMaquina1L"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idPeso1L"
+                    android:layout_below="@+id/txtMaquinaLunesDR"
+                    android:layout_marginStart="40dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:layout_marginTop="2dp"
+                    android:textSize="12dp"
+                    android:focusable="false"
+                    android:text="Máquina de abdutores"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idEjercicio2L"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_below="@+id/idEjercicio1L"
+                    android:text="Tiroenpolea"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/idRepeticiones2L"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idEjercicio1L"
+                    android:layout_below="@+id/idRepeticiones1L"
+                    android:layout_marginStart="155dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/idPeso2L"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idRepeticiones1L"
+                    android:layout_below="@+id/idPeso1L"
+                    android:layout_marginStart="70dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idMaquina2L"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idPeso1L"
+                    android:layout_below="@+id/idMaquina1L"
+                    android:layout_marginStart="40dp"
+                    android:clickable="true"
+                    android:layout_marginTop="2dp"
+                    android:enabled="false"
+                    android:textSize="12dp"
+                    android:focusable="false"
+                    android:text="Máquina de abdutores"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idEjercicio3L"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_below="@+id/idEjercicio2L"
+                    android:text="Tiroenpolea"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/idRepeticiones3L"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idEjercicio1L"
+                    android:layout_below="@+id/idRepeticiones2L"
+                    android:layout_marginStart="155dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/idPeso3L"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idRepeticiones1L"
+                    android:layout_below="@+id/idPeso2L"
+                    android:layout_marginStart="70dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idMaquina3L"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idPeso1L"
+                    android:layout_below="@+id/idMaquina2L"
+                    android:layout_marginStart="40dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:layout_marginTop="2dp"
+                    android:textSize="12dp"
+                    android:focusable="false"
+                    android:text="Máquina de abdutores"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idEjercicio4L"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_below="@+id/idEjercicio3L"
+                    android:text="Tiroenpolea"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/idRepeticiones4L"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idEjercicio1L"
+                    android:layout_below="@+id/idRepeticiones3L"
+                    android:layout_marginStart="155dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/idPeso4L"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idRepeticiones1L"
+                    android:layout_below="@+id/idPeso3L"
+                    android:layout_marginStart="70dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idMaquina4L"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idPeso1L"
+                    android:layout_below="@+id/idMaquina3L"
+                    android:layout_marginStart="40dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:layout_marginTop="2dp"
+                    android:textSize="12dp"
+                    android:focusable="false"
+                    android:text="Máquina de abdutores"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <!--Dia martes-->
+
+                <TextView
+                    android:id="@+id/txtDiaMartesDR"
+                    android:layout_below="@+id/idEjercicio4L"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Martes:"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/txtParteTrabajarMartesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Abdominales"
+                    android:layout_marginStart="85dp"
+                    android:layout_alignLeft="@+id/txtDiaLunesDR"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/idRepeticiones4L"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/txtSeriesMartesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Series:"
+                    android:layout_below="@+id/idPeso4L"
+                    android:layout_marginStart="100dp"
+                    android:layout_alignLeft="@+id/txtParteTrabajarDR"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:id="@+id/idSeriesMartesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  25"
+                    android:layout_marginStart="45dp"
+                    android:layout_alignLeft="@+id/txtSeriesLunesDR"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black"
+                    android:layout_below="@+id/idPeso4L"/>
+
+                <TextView
+                    android:id="@+id/txtnombreEjercicioMartesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:textStyle="italic"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/txtDiaMartesDR"
+                    android:text="Ejercicio:"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:id="@+id/txtRepeticionesMartesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txtnombreEjercicioLunesDR"
+                    android:layout_below="@+id/txtDiaMartesDR"
+                    android:layout_marginStart="125dp"
+                    android:clickable="true"
+                    android:textStyle="italic"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Repeticiones:"
+                    android:textColor="@color/black"/>
+
+
+                <TextView
+                    android:id="@+id/txtPesoMartesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txtRepeticionesLunesDR"
+                    android:layout_below="@+id/txtDiaMartesDR"
+                    android:layout_marginStart="95dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:textStyle="italic"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:text="Peso:"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/txtMaquinaMartesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txtPesoLunesDR"
+                    android:layout_below="@+id/txtDiaMartesDR"
+                    android:layout_marginStart="75dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:textStyle="italic"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:text="Máquina:"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idEjercicio1M"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_below="@+id/txtnombreEjercicioMartesDR"
+                    android:text="Tiroenpolea"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/idRepeticiones1M"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idEjercicio1L"
+                    android:layout_below="@+id/txtnombreEjercicioMartesDR"
+                    android:layout_marginStart="155dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/idPeso1M"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idRepeticiones1L"
+                    android:layout_below="@+id/txtPesoMartesDR"
+                    android:layout_marginStart="70dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idMaquina1M"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idPeso1L"
+                    android:layout_below="@+id/txtMaquinaMartesDR"
+                    android:layout_marginStart="40dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:layout_marginTop="2dp"
+                    android:textSize="12dp"
+                    android:focusable="false"
+                    android:text="Máquina de abdutores"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idEjercicio2M"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_below="@+id/idEjercicio1M"
+                    android:text="Tiroenpolea"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/idRepeticiones2M"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idEjercicio1L"
+                    android:layout_below="@+id/idRepeticiones1M"
+                    android:layout_marginStart="155dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/idPeso2M"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idRepeticiones1L"
+                    android:layout_below="@+id/idPeso1M"
+                    android:layout_marginStart="70dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idMaquina2M"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idPeso1L"
+                    android:layout_below="@+id/idMaquina1M"
+                    android:layout_marginStart="40dp"
+                    android:clickable="true"
+                    android:layout_marginTop="2dp"
+                    android:enabled="false"
+                    android:textSize="12dp"
+                    android:focusable="false"
+                    android:text="Máquina de abdutores"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idEjercicio3M"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_below="@+id/idEjercicio2M"
+                    android:text="Tiroenpolea"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/idRepeticiones3M"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idEjercicio1L"
+                    android:layout_below="@+id/idRepeticiones2M"
+                    android:layout_marginStart="155dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/idPeso3M"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idRepeticiones1L"
+                    android:layout_below="@+id/idPeso2M"
+                    android:layout_marginStart="70dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idMaquina3M"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idPeso1L"
+                    android:layout_below="@+id/idMaquina2M"
+                    android:layout_marginStart="40dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:layout_marginTop="2dp"
+                    android:textSize="12dp"
+                    android:focusable="false"
+                    android:text="Máquina de abdutores"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idEjercicio4M"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_below="@+id/idEjercicio3M"
+                    android:text="Tiroenpolea"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/idRepeticiones4M"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idEjercicio1L"
+                    android:layout_below="@+id/idRepeticiones3M"
+                    android:layout_marginStart="155dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/idPeso4M"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idRepeticiones1M"
+                    android:layout_below="@+id/idPeso3M"
+                    android:layout_marginStart="70dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idMaquina4M"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idPeso1L"
+                    android:layout_below="@+id/idMaquina3M"
+                    android:layout_marginStart="40dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:layout_marginTop="2dp"
+                    android:textSize="12dp"
+                    android:focusable="false"
+                    android:text="Máquina de abdutores"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                 <!--Miercoles-->
+                <TextView
+                    android:id="@+id/txtDiaMiercolesDR"
+                    android:layout_below="@+id/idEjercicio4M"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Miercoles:"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/txtParteTrabajarMiercolesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Abdominales"
+                    android:layout_marginStart="85dp"
+                    android:layout_alignLeft="@+id/txtDiaMartesDR"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/idRepeticiones4M"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/txtSeriesMiercolesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Series:"
+                    android:layout_below="@+id/idPeso4M"
+                    android:layout_marginStart="100dp"
+                    android:layout_alignLeft="@+id/txtParteTrabajarDR"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:id="@+id/idSeriesMiercolesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  25"
+                    android:layout_marginStart="45dp"
+                    android:layout_alignLeft="@+id/txtSeriesLunesDR"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black"
+                    android:layout_below="@+id/idPeso4M"/>
+
+                <TextView
+                    android:id="@+id/txtnombreEjercicioMiercolesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:textStyle="italic"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/txtDiaMiercolesDR"
+                    android:text="Ejercicio:"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:id="@+id/txtRepeticionesMiercolesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txtnombreEjercicioLunesDR"
+                    android:layout_below="@+id/txtDiaMiercolesDR"
+                    android:layout_marginStart="125dp"
+                    android:clickable="true"
+                    android:textStyle="italic"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Repeticiones:"
+                    android:textColor="@color/black"/>
+
+
+                <TextView
+                    android:id="@+id/txtPesoMiercolesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txtRepeticionesLunesDR"
+                    android:layout_below="@+id/txtDiaMiercolesDR"
+                    android:layout_marginStart="95dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:textStyle="italic"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:text="Peso:"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/txtMaquinaMiercolesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txtPesoLunesDR"
+                    android:layout_below="@+id/txtDiaMiercolesDR"
+                    android:layout_marginStart="75dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:textStyle="italic"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:text="Máquina:"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idEjercicio1Mi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_below="@+id/txtnombreEjercicioMiercolesDR"
+                    android:text="Tiroenpolea"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/idRepeticiones1Mi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idEjercicio1L"
+                    android:layout_below="@+id/txtnombreEjercicioMiercolesDR"
+                    android:layout_marginStart="155dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/idPeso1Mi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idRepeticiones1L"
+                    android:layout_below="@+id/txtPesoMiercolesDR"
+                    android:layout_marginStart="70dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idMaquina1Mi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idPeso1L"
+                    android:layout_below="@+id/txtMaquinaMiercolesDR"
+                    android:layout_marginStart="40dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:layout_marginTop="2dp"
+                    android:textSize="12dp"
+                    android:focusable="false"
+                    android:text="Máquina de abdutores"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idEjercicio2Mi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_below="@+id/idEjercicio1Mi"
+                    android:text="Tiroenpolea"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/idRepeticiones2Mi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idEjercicio1L"
+                    android:layout_below="@+id/idRepeticiones1Mi"
+                    android:layout_marginStart="155dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/idPeso2Mi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idRepeticiones1L"
+                    android:layout_below="@+id/idPeso1Mi"
+                    android:layout_marginStart="70dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idMaquina2Mi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idPeso1L"
+                    android:layout_below="@+id/idMaquina1Mi"
+                    android:layout_marginStart="40dp"
+                    android:clickable="true"
+                    android:layout_marginTop="2dp"
+                    android:enabled="false"
+                    android:textSize="12dp"
+                    android:focusable="false"
+                    android:text="Máquina de abdutores"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idEjercicio3Mi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_below="@+id/idEjercicio2Mi"
+                    android:text="Tiroenpolea"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/idRepeticiones3Mi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idEjercicio1L"
+                    android:layout_below="@+id/idRepeticiones2Mi"
+                    android:layout_marginStart="155dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/idPeso3Mi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idRepeticiones1L"
+                    android:layout_below="@+id/idPeso2Mi"
+                    android:layout_marginStart="70dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idMaquina3Mi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idPeso1L"
+                    android:layout_below="@+id/idMaquina2Mi"
+                    android:layout_marginStart="40dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:layout_marginTop="2dp"
+                    android:textSize="12dp"
+                    android:focusable="false"
+                    android:text="Máquina de abdutores"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idEjercicio4Mi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_below="@+id/idEjercicio3Mi"
+                    android:text="Tiroenpolea"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/idRepeticiones4Mi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idEjercicio1L"
+                    android:layout_below="@+id/idRepeticiones3Mi"
+                    android:layout_marginStart="155dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/idPeso4Mi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idRepeticiones1M"
+                    android:layout_below="@+id/idPeso3Mi"
+                    android:layout_marginStart="70dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idMaquina4Mi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idPeso1L"
+                    android:layout_below="@+id/idMaquina3Mi"
+                    android:layout_marginStart="40dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:layout_marginTop="2dp"
+                    android:textSize="12dp"
+                    android:focusable="false"
+                    android:text="Máquina de abdutores"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+            <!--Jueves-->
+
+                <TextView
+                    android:id="@+id/txtDiaJuevesDR"
+                    android:layout_below="@+id/idEjercicio4Mi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jueves:"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/txtParteTrabajarJuevesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Abdominales"
+                    android:layout_marginStart="85dp"
+                    android:layout_alignLeft="@+id/txtDiaMartesDR"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/idRepeticiones4Mi"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/txtSeriesJuevesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Series:"
+                    android:layout_below="@+id/idPeso4Mi"
+                    android:layout_marginStart="100dp"
+                    android:layout_alignLeft="@+id/txtParteTrabajarDR"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:id="@+id/idSeriesJuevesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  25"
+                    android:layout_marginStart="45dp"
+                    android:layout_alignLeft="@+id/txtSeriesLunesDR"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black"
+                    android:layout_below="@+id/idPeso4Mi"/>
+
+                <TextView
+                    android:id="@+id/txtnombreEjercicioJuevesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:textStyle="italic"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/txtDiaJuevesDR"
+                    android:text="Ejercicio:"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:id="@+id/txtRepeticionesJuevesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txtnombreEjercicioLunesDR"
+                    android:layout_below="@+id/txtDiaJuevesDR"
+                    android:layout_marginStart="125dp"
+                    android:clickable="true"
+                    android:textStyle="italic"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Repeticiones:"
+                    android:textColor="@color/black"/>
+
+
+                <TextView
+                    android:id="@+id/txtPesoJuevesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txtRepeticionesLunesDR"
+                    android:layout_below="@+id/txtDiaJuevesDR"
+                    android:layout_marginStart="95dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:textStyle="italic"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:text="Peso:"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/txtMaquinaJuevesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txtPesoLunesDR"
+                    android:layout_below="@+id/txtDiaJuevesDR"
+                    android:layout_marginStart="75dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:textStyle="italic"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:text="Máquina:"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idEjercicio1J"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_below="@+id/txtnombreEjercicioJuevesDR"
+                    android:text="Tiroenpolea"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/idRepeticiones1J"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idEjercicio1L"
+                    android:layout_below="@+id/txtnombreEjercicioJuevesDR"
+                    android:layout_marginStart="155dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/idPeso1J"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idRepeticiones1L"
+                    android:layout_below="@+id/txtPesoJuevesDR"
+                    android:layout_marginStart="70dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idMaquina1J"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idPeso1L"
+                    android:layout_below="@+id/txtMaquinaJuevesDR"
+                    android:layout_marginStart="40dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:layout_marginTop="2dp"
+                    android:textSize="12dp"
+                    android:focusable="false"
+                    android:text="Máquina de abdutores"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idEjercicio2J"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_below="@+id/idEjercicio1J"
+                    android:text="Tiroenpolea"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/idRepeticiones2J"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idEjercicio1L"
+                    android:layout_below="@+id/idRepeticiones1J"
+                    android:layout_marginStart="155dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/idPeso2J"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idRepeticiones1L"
+                    android:layout_below="@+id/idPeso1J"
+                    android:layout_marginStart="70dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idMaquina2J"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idPeso1L"
+                    android:layout_below="@+id/idMaquina1J"
+                    android:layout_marginStart="40dp"
+                    android:clickable="true"
+                    android:layout_marginTop="2dp"
+                    android:enabled="false"
+                    android:textSize="12dp"
+                    android:focusable="false"
+                    android:text="Máquina de abdutores"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idEjercicio3J"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_below="@+id/idEjercicio2J"
+                    android:text="Tiroenpolea"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/idRepeticiones3J"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idEjercicio1L"
+                    android:layout_below="@+id/idRepeticiones2J"
+                    android:layout_marginStart="155dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/idPeso3J"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idRepeticiones1L"
+                    android:layout_below="@+id/idPeso2J"
+                    android:layout_marginStart="70dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idMaquina3J"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idPeso1L"
+                    android:layout_below="@+id/idMaquina2J"
+                    android:layout_marginStart="40dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:layout_marginTop="2dp"
+                    android:textSize="12dp"
+                    android:focusable="false"
+                    android:text="Máquina de abdutores"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idEjercicio4J"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_below="@+id/idEjercicio3J"
+                    android:text="Tiroenpolea"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/idRepeticiones4J"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idEjercicio1L"
+                    android:layout_below="@+id/idRepeticiones3J"
+                    android:layout_marginStart="155dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/idPeso4J"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idRepeticiones1M"
+                    android:layout_below="@+id/idPeso3J"
+                    android:layout_marginStart="70dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idMaquina4J"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idPeso1L"
+                    android:layout_below="@+id/idMaquina3J"
+                    android:layout_marginStart="40dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:layout_marginTop="2dp"
+                    android:textSize="12dp"
+                    android:focusable="false"
+                    android:text="Máquina de abdutores"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+            <!--Viernes-->
+                <TextView
+                    android:id="@+id/txtDiaViernesDR"
+                    android:layout_below="@+id/idEjercicio4J"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Viernes:"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/txtParteTrabajarViernesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Abdominales"
+                    android:layout_marginStart="85dp"
+                    android:layout_alignLeft="@+id/txtDiaMartesDR"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/idRepeticiones4J"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/txtSeriesViernesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Series:"
+                    android:layout_below="@+id/idPeso4J"
+                    android:layout_marginStart="100dp"
+                    android:layout_alignLeft="@+id/txtParteTrabajarDR"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:id="@+id/idSeriesViernesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  25"
+                    android:layout_marginStart="45dp"
+                    android:layout_alignLeft="@+id/txtSeriesLunesDR"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black"
+                    android:layout_below="@+id/idPeso4J"/>
+
+                <TextView
+                    android:id="@+id/txtnombreEjercicioViernesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:textStyle="italic"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/txtDiaViernesDR"
+                    android:text="Ejercicio:"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:id="@+id/txtRepeticionesViernesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txtnombreEjercicioLunesDR"
+                    android:layout_below="@+id/txtDiaViernesDR"
+                    android:layout_marginStart="125dp"
+                    android:clickable="true"
+                    android:textStyle="italic"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Repeticiones:"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/txtPesoViernesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txtRepeticionesLunesDR"
+                    android:layout_below="@+id/txtDiaViernesDR"
+                    android:layout_marginStart="95dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:textStyle="italic"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:text="Peso:"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/txtMaquinaViernesDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txtPesoLunesDR"
+                    android:layout_below="@+id/txtDiaViernesDR"
+                    android:layout_marginStart="75dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:textStyle="italic"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:text="Máquina:"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idEjercicio1V"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_below="@+id/txtnombreEjercicioViernesDR"
+                    android:text="Tiroenpolea"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/idRepeticiones1V"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idEjercicio1L"
+                    android:layout_below="@+id/txtnombreEjercicioViernesDR"
+                    android:layout_marginStart="155dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/idPeso1V"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idRepeticiones1L"
+                    android:layout_below="@+id/txtPesoViernesDR"
+                    android:layout_marginStart="70dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idMaquina1V"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idPeso1L"
+                    android:layout_below="@+id/txtMaquinaViernesDR"
+                    android:layout_marginStart="40dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:layout_marginTop="2dp"
+                    android:textSize="12dp"
+                    android:focusable="false"
+                    android:text="Máquina de abdutores"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idEjercicio2V"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_below="@+id/idEjercicio1V"
+                    android:text="Tiroenpolea"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/idRepeticiones2V"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idEjercicio1L"
+                    android:layout_below="@+id/idRepeticiones1V"
+                    android:layout_marginStart="155dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/idPeso2V"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idRepeticiones1L"
+                    android:layout_below="@+id/idPeso1V"
+                    android:layout_marginStart="70dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idMaquina2V"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idPeso1L"
+                    android:layout_below="@+id/idMaquina1V"
+                    android:layout_marginStart="40dp"
+                    android:clickable="true"
+                    android:layout_marginTop="2dp"
+                    android:enabled="false"
+                    android:textSize="12dp"
+                    android:focusable="false"
+                    android:text="Máquina de abdutores"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idEjercicio3V"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_below="@+id/idEjercicio2V"
+                    android:text="Tiroenpolea"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/idRepeticiones3V"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idEjercicio1L"
+                    android:layout_below="@+id/idRepeticiones2V"
+                    android:layout_marginStart="155dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/idPeso3V"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idRepeticiones1L"
+                    android:layout_below="@+id/idPeso2V"
+                    android:layout_marginStart="70dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idMaquina3V"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idPeso1L"
+                    android:layout_below="@+id/idMaquina2V"
+                    android:layout_marginStart="40dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:layout_marginTop="2dp"
+                    android:textSize="12dp"
+                    android:focusable="false"
+                    android:text="Máquina de abdutores"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idEjercicio4V"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_below="@+id/idEjercicio3V"
+                    android:text="Tiroenpolea"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/idRepeticiones4V"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idEjercicio1L"
+                    android:layout_below="@+id/idRepeticiones3V"
+                    android:layout_marginStart="155dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/idPeso4V"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idRepeticiones1M"
+                    android:layout_below="@+id/idPeso3V"
+                    android:layout_marginStart="70dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idMaquina4V"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idPeso1L"
+                    android:layout_below="@+id/idMaquina3V"
+                    android:layout_marginStart="40dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:layout_marginTop="2dp"
+                    android:textSize="12dp"
+                    android:focusable="false"
+                    android:text="Máquina de abdutores"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+            <!--Sabado-->
+
+                <TextView
+                    android:id="@+id/txtDiaSabadoDR"
+                    android:layout_below="@+id/idEjercicio4V"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sabado:"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/txtParteTrabajarSabadoDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Abdominales"
+                    android:layout_marginStart="85dp"
+                    android:layout_alignLeft="@+id/txtDiaMartesDR"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/idRepeticiones4V"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/txtSeriesSabadoDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Series:"
+                    android:layout_below="@+id/idPeso4V"
+                    android:layout_marginStart="100dp"
+                    android:layout_alignLeft="@+id/txtParteTrabajarDR"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:id="@+id/idSeriesSabadoDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  25"
+                    android:layout_marginStart="45dp"
+                    android:layout_alignLeft="@+id/txtSeriesLunesDR"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black"
+                    android:layout_below="@+id/idPeso4V"/>
+
+                <TextView
+                    android:id="@+id/txtnombreEjercicioSabadoDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:textStyle="italic"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/txtDiaSabadoDR"
+                    android:text="Ejercicio:"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:id="@+id/txtRepeticionesSabadoDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txtnombreEjercicioLunesDR"
+                    android:layout_below="@+id/txtDiaSabadoDR"
+                    android:layout_marginStart="125dp"
+                    android:clickable="true"
+                    android:textStyle="italic"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Repeticiones:"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/txtPesoSabadoDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txtRepeticionesLunesDR"
+                    android:layout_below="@+id/txtDiaSabadoDR"
+                    android:layout_marginStart="95dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:textStyle="italic"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:text="Peso:"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/txtMaquinaSabadoDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txtPesoLunesDR"
+                    android:layout_below="@+id/txtDiaSabadoDR"
+                    android:layout_marginStart="75dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:textStyle="italic"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:text="Máquina:"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idEjercicio1S"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_below="@+id/txtnombreEjercicioSabadoDR"
+                    android:text="Tiroenpolea"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/idRepeticiones1S"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idEjercicio1L"
+                    android:layout_below="@+id/txtnombreEjercicioSabadoDR"
+                    android:layout_marginStart="155dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/idPeso1S"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idRepeticiones1L"
+                    android:layout_below="@+id/txtPesoSabadoDR"
+                    android:layout_marginStart="70dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idMaquina1S"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idPeso1L"
+                    android:layout_below="@+id/txtMaquinaSabadoDR"
+                    android:layout_marginStart="40dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:layout_marginTop="2dp"
+                    android:textSize="12dp"
+                    android:focusable="false"
+                    android:text="Máquina de abdutores"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idEjercicio2S"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_below="@+id/idEjercicio1S"
+                    android:text="Tiroenpolea"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/idRepeticiones2S"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idEjercicio1L"
+                    android:layout_below="@+id/idRepeticiones1S"
+                    android:layout_marginStart="155dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/idPeso2S"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idRepeticiones1L"
+                    android:layout_below="@+id/idPeso1S"
+                    android:layout_marginStart="70dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idMaquina2S"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idPeso1L"
+                    android:layout_below="@+id/idMaquina1S"
+                    android:layout_marginStart="40dp"
+                    android:clickable="true"
+                    android:layout_marginTop="2dp"
+                    android:enabled="false"
+                    android:textSize="12dp"
+                    android:focusable="false"
+                    android:text="Máquina de abdutores"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idEjercicio3S"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_below="@+id/idEjercicio2S"
+                    android:text="Tiroenpolea"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/idRepeticiones3S"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idEjercicio1L"
+                    android:layout_below="@+id/idRepeticiones2S"
+                    android:layout_marginStart="155dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/idPeso3S"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idRepeticiones1L"
+                    android:layout_below="@+id/idPeso2S"
+                    android:layout_marginStart="70dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idMaquina3S"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idPeso1L"
+                    android:layout_below="@+id/idMaquina2S"
+                    android:layout_marginStart="40dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:layout_marginTop="2dp"
+                    android:textSize="12dp"
+                    android:focusable="false"
+                    android:text="Máquina de abdutores"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idEjercicio4S"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_below="@+id/idEjercicio3S"
+                    android:text="Tiroenpolea"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/idRepeticiones4S"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idEjercicio1L"
+                    android:layout_below="@+id/idRepeticiones3S"
+                    android:layout_marginStart="155dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/idPeso4S"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idRepeticiones1M"
+                    android:layout_below="@+id/idPeso3S"
+                    android:layout_marginStart="70dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idMaquina4S"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idPeso1L"
+                    android:layout_below="@+id/idMaquina3S"
+                    android:layout_marginStart="40dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:layout_marginTop="2dp"
+                    android:textSize="12dp"
+                    android:focusable="false"
+                    android:text="Máquina de abdutores"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+            <!--Domingo-->
+                <TextView
+                    android:id="@+id/txtDiaDomingoDR"
+                    android:layout_below="@+id/idEjercicio4S"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Domingo:"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/txtParteTrabajarDomingoDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Abdominales"
+                    android:layout_marginStart="85dp"
+                    android:layout_alignLeft="@+id/txtDiaMartesDR"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/idRepeticiones4S"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/txtSeriesDomingoDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Series:"
+                    android:layout_below="@+id/idPeso4S"
+                    android:layout_marginStart="100dp"
+                    android:layout_alignLeft="@+id/txtParteTrabajarDR"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:id="@+id/idSeriesDomingoDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  25"
+                    android:layout_marginStart="45dp"
+                    android:layout_alignLeft="@+id/txtSeriesLunesDR"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black"
+                    android:layout_below="@+id/idPeso4S"/>
+
+                <TextView
+                    android:id="@+id/txtnombreEjercicioDomingoDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:textStyle="italic"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/txtDiaDomingoDR"
+                    android:text="Ejercicio:"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:id="@+id/txtRepeticionesDomingoDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txtnombreEjercicioLunesDR"
+                    android:layout_below="@+id/txtDiaDomingoDR"
+                    android:layout_marginStart="125dp"
+                    android:clickable="true"
+                    android:textStyle="italic"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Repeticiones:"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/txtPesoDomingoDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txtRepeticionesLunesDR"
+                    android:layout_below="@+id/txtDiaDomingoDR"
+                    android:layout_marginStart="95dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:textStyle="italic"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:text="Peso:"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/txtMaquinaDomingoDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txtPesoLunesDR"
+                    android:layout_below="@+id/txtDiaDomingoDR"
+                    android:layout_marginStart="75dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:textStyle="italic"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:text="Máquina:"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idEjercicio1D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_below="@+id/txtnombreEjercicioDomingoDR"
+                    android:text="Tiroenpolea"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/idRepeticiones1D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idEjercicio1L"
+                    android:layout_below="@+id/txtnombreEjercicioDomingoDR"
+                    android:layout_marginStart="155dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/idPeso1D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idRepeticiones1L"
+                    android:layout_below="@+id/txtPesoDomingoDR"
+                    android:layout_marginStart="70dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idMaquina1D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idPeso1L"
+                    android:layout_below="@+id/txtMaquinaDomingoDR"
+                    android:layout_marginStart="40dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:layout_marginTop="2dp"
+                    android:textSize="12dp"
+                    android:focusable="false"
+                    android:text="Máquina de abdutores"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idEjercicio2D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_below="@+id/idEjercicio1D"
+                    android:text="Tiroenpolea"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/idRepeticiones2D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idEjercicio1L"
+                    android:layout_below="@+id/idRepeticiones1D"
+                    android:layout_marginStart="155dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/idPeso2D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idRepeticiones1L"
+                    android:layout_below="@+id/idPeso1D"
+                    android:layout_marginStart="70dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idMaquina2D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idPeso1L"
+                    android:layout_below="@+id/idMaquina1D"
+                    android:layout_marginStart="40dp"
+                    android:clickable="true"
+                    android:layout_marginTop="2dp"
+                    android:enabled="false"
+                    android:textSize="12dp"
+                    android:focusable="false"
+                    android:text="Máquina de abdutores"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idEjercicio3D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_below="@+id/idEjercicio2D"
+                    android:text="Tiroenpolea"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/idRepeticiones3D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idEjercicio1L"
+                    android:layout_below="@+id/idRepeticiones2D"
+                    android:layout_marginStart="155dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/idPeso3D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idRepeticiones1L"
+                    android:layout_below="@+id/idPeso2D"
+                    android:layout_marginStart="70dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idMaquina3D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idPeso1L"
+                    android:layout_below="@+id/idMaquina2D"
+                    android:layout_marginStart="40dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:layout_marginTop="2dp"
+                    android:textSize="12dp"
+                    android:focusable="false"
+                    android:text="Máquina de abdutores"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idEjercicio4D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_below="@+id/idEjercicio3D"
+                    android:text="Tiroenpolea"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/idRepeticiones4D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idEjercicio1L"
+                    android:layout_below="@+id/idRepeticiones3D"
+                    android:layout_marginStart="155dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/idPeso4D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idRepeticiones1M"
+                    android:layout_below="@+id/idPeso3D"
+                    android:layout_marginStart="70dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="12"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/idMaquina4D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/idPeso1L"
+                    android:layout_below="@+id/idMaquina3D"
+                    android:layout_marginStart="40dp"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:layout_marginTop="2dp"
+                    android:textSize="12dp"
+                    android:focusable="false"
+                    android:text="Máquina de abdutores"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+        </ScrollView>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnRegresarDR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#4F4F4F"
+            app:srcCompat="@drawable/ic_backwhite" />
+    </RelativeLayout>
+
+
+
+</FrameLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inicio">
+    <fragment
+        android:id="@+id/inicio"
+        android:name="com.example.proyectoi.Inicio"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicio_to_inMenu"
+            app:destination="@id/inMenu" />
+        <action
+            android:id="@+id/action_inicio_to_registro"
+            app:destination="@id/registro" />
+        <action
+            android:id="@+id/action_inicio_to_recuperarContrasenia"
+            app:destination="@id/recuperarContrasenia" />
+    </fragment>
+    <fragment
+        android:id="@+id/inMenu"
+        android:name="com.example.proyectoi.inMenu"
+        android:label="fragment_in_menu"
+        tools:layout="@layout/fragment_in_menu" >
+        <action
+            android:id="@+id/action_inMenu_to_inicio"
+            app:destination="@id/inicio" />
+        <action
+            android:id="@+id/action_inMenu_to_menuActions"
+            app:destination="@id/menuActions" />
+        <action
+            android:id="@+id/action_inMenu_to_editusuario"
+            app:destination="@id/editusuario" />
+        <action
+            android:id="@+id/action_inMenu_to_historicoAsesorado"
+            app:destination="@id/historicoAsesorado" />
+        <action
+            android:id="@+id/action_inMenu_to_informeAsesorado"
+            app:destination="@id/informeAsesorado" />
+        <action
+            android:id="@+id/action_inMenu_to_registroAsesorado"
+            app:destination="@id/registroAsesorado" />
+        <action
+            android:id="@+id/action_inMenu_to_rutinas"
+            app:destination="@id/rutinas" />
+        <action
+            android:id="@+id/action_inMenu_to_onsultarAsesorados"
+            app:destination="@id/consultarAsesorados" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuActions"
+        android:name="com.example.proyectoi.menuActions"
+        android:label="fragment_menu_actions"
+        tools:layout="@layout/fragment_menu_actions" />
+    <fragment
+        android:id="@+id/registro"
+        android:name="com.example.proyectoi.Registro"
+        android:label="Registro" >
+        <action
+            android:id="@+id/action_registro_to_inicio"
+            app:destination="@id/inicio" />
+    </fragment>
+    <fragment
+        android:id="@+id/editusuario"
+        android:name="com.example.proyectoi.editusuario"
+        android:label="fragment_editusuario"
+        tools:layout="@layout/fragment_editusuario" >
+        <action
+            android:id="@+id/action_editusuario_to_inMenu"
+            app:destination="@id/inMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/historicoAsesorado"
+        android:name="com.example.proyectoi.historicoAsesorado"
+        android:label="fragment_historico_asesorado"
+        tools:layout="@layout/fragment_historico_asesorado" >
+        <action
+            android:id="@+id/action_historicoAsesorado_to_inMenu"
+            app:destination="@id/inMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/informeAsesorado"
+        android:name="com.example.proyectoi.informeAsesorado"
+        android:label="fragment_informe_asesorado"
+        tools:layout="@layout/fragment_informe_asesorado" >
+        <action
+            android:id="@+id/action_informeAsesorado_to_inMenu"
+            app:destination="@id/inMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/registroAsesorado"
+        android:name="com.example.proyectoi.registroAsesorado"
+        android:label="fragment_registro_asesorado"
+        tools:layout="@layout/fragment_registro_asesorado" >
+        <action
+            android:id="@+id/action_registroAsesorado_to_inMenu"
+            app:destination="@id/inMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/rutinas"
+        android:name="com.example.proyectoi.rutinas"
+        android:label="fragment_rutinas"
+        tools:layout="@layout/fragment_rutinas" >
+        <action
+            android:id="@+id/action_rutinas_to_inMenu"
+            app:destination="@id/inMenu" />
+        <action
+            android:id="@+id/action_rutinas_to_agregarRutina"
+            app:destination="@id/agregarRutina" />
+        <action
+            android:id="@+id/action_rutinas_to_detallesRutina"
+            app:destination="@id/detallesRutina" />
+        <action
+            android:id="@+id/action_rutinas_self"
+            app:destination="@id/rutinas" />
+    </fragment>
+    <fragment
+        android:id="@+id/consultarAsesorados"
+        android:name="com.example.proyectoi.consultarAsesorados"
+        android:label="fragment_consultar_asesorados"
+        tools:layout="@layout/fragment_consultar_asesorados">
+        <action
+            android:id="@+id/action_onsultarAsesorados_to_inMenu"
+            app:destination="@id/inMenu" />
+        <action
+            android:id="@+id/action_consultarAsesorados_to_detallesAsesorado"
+            app:destination="@id/detallesAsesorado" />
+        <action
+            android:id="@+id/action_consultarAsesorados_self"
+            app:destination="@id/consultarAsesorados" />
+    </fragment>
+    <fragment
+        android:id="@+id/agregarRutina"
+        android:name="com.example.proyectoi.agregarRutina"
+        android:label="fragment_agregar_rutina"
+        tools:layout="@layout/fragment_agregar_rutina" >
+        <action
+            android:id="@+id/action_agregarRutina_to_rutinas"
+            app:destination="@id/rutinas" />
+    </fragment>
+    <fragment
+        android:id="@+id/recuperarContrasenia"
+        android:name="com.example.proyectoi.recuperarContrasenia"
+        android:label="fragment_recuperar_contrasenia"
+        tools:layout="@layout/fragment_recuperar_contrasenia" >
+        <action
+            android:id="@+id/action_recuperarContrasenia_to_inicio"
+            app:destination="@id/inicio" />
+    </fragment>
+    <fragment
+        android:id="@+id/detallesAsesorado"
+        android:name="com.example.proyectoi.detallesAsesorado"
+        android:label="fragment_detalles_asesorado"
+        tools:layout="@layout/fragment_detalles_asesorado" >
+        <action
+            android:id="@+id/action_detallesAsesorado_to_consultarAsesorados"
+            app:destination="@id/consultarAsesorados" />
+    </fragment>
+    <fragment
+        android:id="@+id/detallesRutina"
+        android:name="com.example.proyectoi.detallesRutina"
+        android:label="fragment_detalles_rutina"
+        tools:layout="@layout/fragment_detalles_rutina" >
+        <action
+            android:id="@+id/action_detallesRutina_to_rutinas"
+            app:destination="@id/rutinas" />
+    </fragment>
+</navigation>

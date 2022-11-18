@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:animateLayoutChanges="true"
+    android:id="@+id/miCARDRUTINAD"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true"
+    >
+
+    <TextView
+        android:id="@+id/txtidRutina"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EAEAEA"
+        android:paddingLeft="26dp"
+        android:paddingRight="26dp"
+        android:paddingTop="26dp"
+        android:paddingBottom="26dp">
+
+        <TextView
+            android:id="@+id/txtNombreRutina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre de la rutina"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+             />
+
+        <TextView
+            android:id="@+id/txtNivelRutina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Nivel de la rutina"
+            android:textColor="#BC0101"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_alignLeft="@id/txtNombreRutina"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="145dp"/>
+
+        <TextView
+            android:id="@+id/txtdiasemanda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1234567"
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_below="@+id/txtNivelRutina"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/txtParteaTrabajar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Parte a trabajar"
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_alignParentLeft="@+id/txtdiasemanda"
+            android:layout_below="@+id/txtNivelRutina"
+            android:layout_marginLeft="150dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/txtnombreEjercicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre del ejercicio"
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_below="@+id/txtParteaTrabajar"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp" />
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

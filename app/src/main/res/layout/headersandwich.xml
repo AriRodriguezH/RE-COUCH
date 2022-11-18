@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".inMenu"
+    android:layout_height="215dp"
+    android:background="@drawable/headercolor"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/imgCoach"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/logosandwich" />
+
+    <TextView
+        android:layout_marginLeft="15dp"
+        android:id="@+id/txtBienvenido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-black"
+        android:textStyle="bold"
+        android:text="Bienvenido a RE_COACH"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+
+</LinearLayout>

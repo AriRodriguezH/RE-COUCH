@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".menuActions">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/txtRegistroAsesorado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="1dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Registrar Asesorados"
+        android:textAlignment="center"
+        android:textColor="#f93421"
+        android:textSize="45sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnRegresarRA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#4F4F4F"
+        android:elevation="15dp"
+        app:srcCompat="@drawable/ic_backwhite" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/lol"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txtRegistroAsesorado"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="75dp"
+        android:background="@drawable/backroundgeneral"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/txtRegistro"
+            android:layout_marginTop="15dp">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:ems="10"
+                    android:hint="Nombre"
+                    android:textColorHint="@color/black"
+                    app:boxStrokeColor="#ec6c68"
+                    app:endIconTint="@color/black"
+                    app:hintTextColor="@color/black"
+                    app:startIconDrawable="@drawable/ic_baseline_person_24"
+                    app:startIconTint="@color/black">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/etNombreRA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                        android:ems="10"
+                        android:fontFamily="sans-serif"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="#706B6B"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:ems="10"
+                    android:hint="Apellido Paterno"
+                    android:textColorHint="@color/black"
+                    app:boxStrokeColor="@color/black"
+                    app:hintTextColor="@color/black"
+                    app:startIconDrawable="@drawable/ic_app"
+                    app:startIconTint="@color/black">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/etapellidoPRA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        android:textColor="@color/black"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:ems="10"
+                    android:hint="Apellido Materno"
+                    android:textColorHint="@color/black"
+                    app:boxStrokeColor="@color/black"
+                    app:endIconTint="@color/black"
+                    app:hintTextColor="@color/black"
+                    app:startIconDrawable="@drawable/ic_apm"
+                    app:startIconTint="@color/black">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/etapellidoMRA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        android:textColor="@color/black"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:ems="10"
+                    android:hint="Fecha de Nacimiento"
+                    android:textColorHint="@color/black"
+                    app:boxStrokeColor="@color/black"
+                    app:endIconTint="@color/black"
+                    app:hintTextColor="@color/black"
+                    app:startIconDrawable="@drawable/ic_calendar"
+                    app:startIconTint="@color/black">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/etfechaNacimientoRA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:inputType="date"
+                        android:minHeight="48dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="#706B6B" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Seleccione su Sexo"
+                    android:textColorHint="@color/black"
+                    app:boxStrokeColor="@color/black"
+                    app:endIconTint="@color/black"
+                    app:hintTextColor="@color/black"
+                    app:startIconDrawable="@drawable/ic_genere"
+                    app:startIconTint="@color/black">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/etSexoRA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:minHeight="48dp"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Estado dentro del GYM"
+                    android:textColorHint="@color/black"
+                    app:boxStrokeColor="@color/black"
+                    app:endIconTint="@color/black"
+                    app:hintTextColor="@color/black"
+                    app:startIconDrawable="@drawable/ic_statusgym"
+                    app:startIconTint="@color/black">
+                    <AutoCompleteTextView
+                        android:id="@+id/etEstadoRA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:minHeight="48dp"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:helperTextTextColor="@color/black"
+                    android:hint="Fecha del Registro"
+                    android:textColorHint="@color/black"
+                    app:boxStrokeColor="@color/black"
+                    app:endIconTint="@color/black"
+                    app:hintTextColor="@color/black"
+                    app:startIconDrawable="@drawable/ic_fecharegistro"
+                    app:startIconTint="@color/black">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/etFechaRegistroRA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:inputType="date"
+                        android:minHeight="48dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="#706B6B" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:ems="10"
+                    android:hint="Peso"
+                    android:textColorHint="@color/black"
+                    app:boxStrokeColor="@color/black"
+                    app:endIconTint="@color/black"
+                    app:hintTextColor="@color/black"
+                    app:startIconDrawable="@drawable/peso"
+                    app:startIconTint="@color/black">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/etPesoRA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="0123456789."
+                        android:maxLength="4"
+                        android:textColorHint="#706B6B"
+                        android:inputType="numberDecimal"
+                        android:minHeight="48dp"
+                        android:textColor="@color/black"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:ems="10"
+                    android:hint="Altura"
+                    android:textColorHint="@color/black"
+                    app:boxStrokeColor="@color/black"
+                    app:endIconTint="@color/black"
+                    app:hintTextColor="@color/black"
+                    app:startIconDrawable="@drawable/altura"
+                    app:startIconTint="@color/black">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/etAlturaRA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:digits="0123456789."
+                        android:maxLength="6"
+                        android:textColorHint="#706B6B"
+                        android:minHeight="48dp"
+                        android:textColor="@color/black"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:ems="10"
+                    android:hint="Talla"
+                    android:textColorHint="@color/black"
+                    app:boxStrokeColor="@color/black"
+                    app:endIconTint="@color/black"
+                    app:hintTextColor="@color/black"
+                    app:startIconDrawable="@drawable/talla"
+                    app:startIconTint="@color/black">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/etTallaRA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:inputType="numberDecimal"
+                        android:minHeight="48dp"
+                        android:textColorHint="#706B6B"
+                        android:digits="0123456789."
+                        android:maxLength="4"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/textViewE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textColor="#163e6c"
+                    android:text="Selecciona al entrenador acargo del asesorado:"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    />
+                <Spinner
+                    android:id="@+id/etIdEntrenadorRA"
+                    android:layout_width="match_parent"
+                    android:layout_height="41dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/black"
+                    android:ems="10"
+                    app:boxStrokeColor="@color/black"
+                    app:endIconTint="@color/black"
+                    app:startIconDrawable="@drawable/ic_statusgym"
+                    app:startIconTint="@color/black" />
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textColor="#163e6c"
+                    android:text="Selecciona la rutina a llevar del asesorado:"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    />
+
+                <Spinner
+                    android:id="@+id/etRutinaRA"
+                    android:layout_width="match_parent"
+                    android:layout_height="41dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/black"
+                    android:ems="10"
+                    app:boxStrokeColor="@color/black"
+                    app:endIconTint="@color/black"
+                    app:startIconDrawable="@drawable/ic_statusgym"
+                    app:startIconTint="@color/black" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:helperTextTextColor="@color/black"
+                    android:hint="Fecha del Inicio de la rutina"
+                    android:textColorHint="@color/black"
+                    app:boxStrokeColor="@color/black"
+                    app:endIconTint="@color/black"
+                    app:hintTextColor="@color/black"
+                    app:startIconDrawable="@drawable/ic_fecharegistro"
+                    app:startIconTint="@color/black">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/etFechaInicioRutinaRA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:inputType="date"
+                        android:minHeight="48dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="#706B6B" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:helperTextTextColor="@color/black"
+                    android:hint="Fecha del Fin de la rutina"
+                    android:textColorHint="@color/black"
+                    app:boxStrokeColor="@color/black"
+                    app:endIconTint="@color/black"
+                    app:hintTextColor="@color/black"
+                    app:startIconDrawable="@drawable/ic_fecharegistro"
+                    app:startIconTint="@color/black">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/etFechaFinRutinaRA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:inputType="date"
+                        android:minHeight="48dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="#706B6B" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="341dp"
+        android:layout_height="57dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="180dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="0dp">
+
+        <Button
+            android:id="@+id/btnRegistroAsesorado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:elevation="10dp"
+            android:background="@drawable/bg_inicios"
+            android:text="Registrar Asesorado"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+<!--
+                    <EditText
+                        android:id="@+id/etIdEntrenadorRA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:hint="Seleccione su id de coach"
+                        android:textColorHint="#706B6B"
+                        android:digits="123456789"
+                        android:inputType="number"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cv"
+                android:layout_alignLeft="@+id/cv"
+                android:layout_alignRight="@+id/cv"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="-50dp"
+                android:layout_marginRight="35dp"
+                android:elevation="10dp">
+
+                <Button
+                    android:id="@+id/btnRegistroAsesorado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_inicios"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:text="Registrar Asesorado"
+                    android:textAllCaps="false" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>-->
+</RelativeLayout>

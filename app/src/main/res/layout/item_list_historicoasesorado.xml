@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/CvHistoricoA"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:animateLayoutChanges="true"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EAEAEA"
+        android:paddingLeft="26dp"
+        android:paddingRight="26dp"
+        android:paddingTop="26dp"
+        android:paddingBottom="26dp">
+
+        <TextView
+            android:id="@+id/txtNombreHA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre"
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_below="@+id/txtFechaCreacionHA"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/txtapeliidopHA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="App"
+            android:layout_marginLeft="95dp"
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_below="@+id/txtFechaCreacionHA"
+            android:layout_alignLeft="@id/txtNombreHA"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/txtapellidomHA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apm"
+            android:layout_marginLeft="195dp"
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_alignLeft="@id/txtapeliidopHA"
+            android:layout_below="@+id/txtFechaCreacionHA"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp" />
+
+
+        <!-- Fecha -->
+        <TextView
+            android:id="@+id/txtFechaCreacionHA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha del registro"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentStart="false"
+            android:textColor="@android:color/black"
+            android:layout_toRightOf="@+id/imageView" />
+
+        <!-- Altura Peso Talla Sexo -->
+        <TextView
+            android:id="@+id/txtalturaHA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Altura"
+            android:textColor="#7E0114"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/txtapellidomHA"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/txtPesoHA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Peso"
+            android:layout_marginLeft="15dp"
+            android:textColor="#7E0114"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/txtalturaHA"
+            android:layout_below="@+id/txtapellidomHA"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/txttallaHA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Talla"
+            android:layout_marginLeft="15dp"
+            android:textColor="#7E0114"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/txtPesoHA"
+            android:layout_below="@+id/txtapellidomHA"
+            android:textStyle="italic" />
+
+        <!-- Icono para la fecha -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_calendar"
+            android:layout_marginRight="3dp" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

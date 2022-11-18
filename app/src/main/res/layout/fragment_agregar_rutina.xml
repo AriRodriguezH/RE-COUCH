@@ -1,0 +1,2685 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".agregarRutina">
+
+    <TextView
+        android:id="@+id/tvAgregarRutinas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="61dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="43dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Agregar Rutina"
+        android:textAlignment="center"
+        android:textColor="#f93421"
+        android:textSize="45sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnRegresarAR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#4F4F4F"
+        android:elevation="15dp"
+        app:srcCompat="@drawable/ic_backwhite" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/lol"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvAgregarRutinas"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="75dp"
+        android:background="@drawable/backroundgeneral"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/txtRegistro"
+            android:layout_marginTop="15dp">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:ems="10"
+                    android:hint="Nombre de la Rutina"
+                    android:textColorHint="@color/black"
+                    app:boxStrokeColor="#ec6c68"
+                    app:endIconTint="@color/black"
+                    app:hintTextColor="@color/black"
+                    app:startIconDrawable="@drawable/ic_nombrerutina"
+                    app:startIconTint="@color/black">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/etNombreRutina"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                        android:ems="10"
+                        android:fontFamily="sans-serif"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="#706B6B"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Nivel de la Rutina"
+                    android:textColorHint="@color/black"
+                    app:boxStrokeColor="@color/black"
+                    app:endIconTint="@color/black"
+                    app:hintTextColor="@color/black"
+                    app:startIconDrawable="@drawable/ic_novel"
+                    app:startIconTint="@color/black">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/etNivelRutina"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:minHeight="48dp"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_gravity="center"
+                            android:background="#be0003"
+                            android:gravity="center"
+                            android:orientation="horizontal"></LinearLayout>
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="18sp"
+                            android:textColor="@color/black"
+                            android:background="@color/white"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+
+                            android:text="Selecciona los dias a trabajar" />
+
+                    </FrameLayout>
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/DiaLunes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:checked="false"
+                    android:buttonTint="#991918"
+                    android:textSize="14sp"
+                    android:focusable="auto"
+                    android:text="Lunes"
+                    android:textColor="@color/black" />
+
+                <ScrollView
+                    android:id="@+id/SCLunes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:layout_below="@+id/DiaLunes"
+                    android:layout_marginTop="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/black"
+                            app:endIconTint="@color/black"
+                            app:hintTextColor="@color/black"
+                            app:startIconTint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/parteTrabajarLunes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="false"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                android:hint="Parte a trabajar"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            app:endIconTint="@color/black"
+                            android:hint="Selecciona el número de series"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/etnoSeriesAR"
+                                android:clickable="true"
+                                android:focusable="false"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            app:endIconTint="@color/black"
+                            android:hint="Número de repeticiones para cada ejercicio"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/etnoRepeticionAR"
+                                android:textColor="@color/black"
+                                android:clickable="true"
+                                android:focusable="false"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="#163e6c"
+                            android:text="Selecciona el nombre de la máquina/material a ocupar:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinerMaquinaLunesE1"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="339dp"
+                            android:layout_height="47dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/black"
+                            android:padding="8dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:layout_marginTop="10dp">
+                            <AutoCompleteTextView
+                                android:id="@+id/nombreEjercicio1Lunes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName"
+                                android:hint="Nombre del ejercicio 1"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/pesolevantar1Lunes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="numberDecimal"
+                                android:hint="Peso a levantar en kilos"
+                                android:digits="0123456789."
+                                android:maxLength="5"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="#163e6c"
+                            android:text="Selecciona el nombre de la máquina/material a ocupar:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinerMaquinaLunesE2"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="339dp"
+                            android:layout_height="47dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/black"
+                            android:padding="8dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:layout_marginTop="20dp">
+                            <AutoCompleteTextView
+                                android:id="@+id/nombreEjercicio2Lunes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:hint="Nombre del ejercicio 2"
+                                android:inputType="textPersonName"
+                                android:textColor="@color/black"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black"
+                            >
+                            <AutoCompleteTextView
+                                android:id="@+id/pesolevantar2Lunes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="numberDecimal"
+                                android:hint="Peso a levantar en kilos"
+                                android:digits="0123456789."
+                                android:maxLength="5"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="#163e6c"
+                            android:text="Selecciona el nombre de la máquina/material a ocupar:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinerMaquinaLunesE3"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="339dp"
+                            android:layout_height="47dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/black"
+                            android:padding="8dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/nombreEjercicio3Lunes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName"
+                                android:hint="Nombre del ejercicio 3"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/pesolevantar3Lunes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="numberDecimal"
+                                android:hint="Peso a levantar en kilos"
+                                android:digits="0123456789."
+                                android:maxLength="5"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="#163e6c"
+                            android:text="Selecciona el nombre de la máquina/material a ocupar:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinerMaquinaLunesE4"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="339dp"
+                            android:layout_height="47dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/black"
+                            android:padding="8dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/nombreEjercicio4Lunes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName"
+                                android:hint="Nombre del ejercicio 4"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/pesolevantar4Lunes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:inputType="numberDecimal"
+                                android:hint="Peso a levantar en kilos"
+                                android:textColor="@color/black"
+                                android:digits="0123456789."
+                                android:maxLength="5"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </ScrollView>
+                <CheckBox
+                    android:id="@+id/Martes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:checked="false"
+                    android:buttonTint="#991918"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:text="Martes"/>
+
+                <ScrollView
+                    android:id="@+id/SCMartes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:layout_below="@+id/DiaMartes"
+                    android:layout_marginTop="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/black"
+                            app:endIconTint="@color/black"
+                            app:hintTextColor="@color/black"
+                            app:startIconTint="@color/black">
+                            >
+                            <AutoCompleteTextView
+                                android:id="@+id/parteTrabajarMartes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="false"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                android:hint="Parte a trabajar"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            app:endIconTint="@color/black"
+                            android:hint="Selecciona el número de series"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:clickable="true"
+                                android:focusable="false"
+                                android:id="@+id/etnoSeriesARMartes"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            android:hint="Número de repeticiones para cada ejercicio"
+                            app:boxStrokeColor="@color/black"
+                            app:endIconTint="@color/black"
+                            android:textColorHint="@color/black">
+
+                            <AutoCompleteTextView
+                                android:clickable="true"
+                                android:focusable="false"
+                                android:id="@+id/etnoRepeticionARMartes"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="#163e6c"
+                            android:text="Selecciona el nombre de la máquina/material a ocupar:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinerMaquinaMartesE1"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="339dp"
+                            android:layout_height="47dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/black"
+                            android:padding="8dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:layout_marginTop="20dp">
+                            <AutoCompleteTextView
+                                android:id="@+id/nombreEjercicio1Martes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName"
+                                android:hint="Nombre del ejercicio 1"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/pesolevantar1Martes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="numberDecimal"
+                                android:hint="Peso a levantar en kilos"
+                                android:digits="0123456789."
+                                android:maxLength="5"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="#163e6c"
+                            android:text="Selecciona el nombre de la máquina/material a ocupar:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinerMaquinaMartesE2"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="339dp"
+                            android:layout_height="47dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/black"
+                            android:padding="8dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:layout_marginTop="20dp">
+                            <AutoCompleteTextView
+                                android:id="@+id/nombreEjercicio2Martes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:hint="Nombre del ejercicio 2"
+                                android:inputType="textPersonName"
+                                android:textColor="@color/black"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black"
+                            >
+                            <AutoCompleteTextView
+                                android:id="@+id/pesolevantar2Martes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="numberDecimal"
+                                android:hint="Peso a levantar en kilos"
+                                android:digits="0123456789."
+                                android:maxLength="5"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="#163e6c"
+                            android:text="Selecciona el nombre de la máquina/material a ocupar:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinerMaquinaMartesE3"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="339dp"
+                            android:layout_height="47dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/black"
+                            android:padding="8dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/nombreEjercicio3Martes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName"
+                                android:hint="Nombre del ejercicio 3"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/pesolevantar3Martes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="numberDecimal"
+                                android:hint="Peso a levantar en kilos"
+                                android:digits="0123456789."
+                                android:maxLength="5"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="#163e6c"
+                            android:text="Selecciona el nombre de la máquina/material a ocupar:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinerMaquinaMartesE4"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="339dp"
+                            android:layout_height="47dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/black"
+                            android:padding="8dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/nombreEjercicio4Martes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName"
+                                android:hint="Nombre del ejercicio 4"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/pesolevantar4Martes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:inputType="numberDecimal"
+                                android:hint="Peso a levantar en kilos"
+                                android:textColor="@color/black"
+                                android:digits="0123456789."
+                                android:maxLength="5"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+                <CheckBox
+                    android:id="@+id/Miercoles"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:checked="false"
+                    android:buttonTint="#991918"
+                    android:textSize="14sp"
+                    android:text="Miercoles"
+                    android:textColor="@color/black"/>
+
+                <ScrollView
+                    android:id="@+id/SCMiercoles"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/DiaMiercoles"
+                    android:visibility="gone"
+                    android:layout_marginTop="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/black"
+                            app:endIconTint="@color/black"
+                            app:hintTextColor="@color/black"
+                            app:startIconTint="@color/black">
+                            >
+                            <AutoCompleteTextView
+                                android:id="@+id/parteTrabajarMiercoles"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="false"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                android:hint="Parte a trabajar"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            android:hint="Selecciona el número de series"
+                            app:boxStrokeColor="@color/black"
+                            app:endIconTint="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:clickable="true"
+                                android:focusable="false"
+                                android:id="@+id/etnoSeriesARMiercoles"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            app:endIconTint="@color/black"
+                            android:layout_marginRight="10dp"
+                            android:hint="Número de repeticiones para cada ejercicio"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+
+                            <AutoCompleteTextView
+                                android:clickable="true"
+                                android:focusable="false"
+                                android:id="@+id/etnoRepeticionARMiercoles"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="#163e6c"
+                            android:text="Selecciona el nombre de la máquina/material a ocupar:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinerMaquinaMiercolesE1"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="339dp"
+                            android:layout_height="47dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/black"
+                            android:padding="8dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:layout_marginTop="20dp">
+                            <AutoCompleteTextView
+                                android:id="@+id/nombreEjercicio1Miercoles"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName"
+                                android:hint="Nombre del ejercicio 1"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/pesolevantar1Miercoles"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="numberDecimal"
+                                android:hint="Peso a levantar en kilos"
+                                android:digits="0123456789."
+                                android:maxLength="5"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="#163e6c"
+                            android:text="Selecciona el nombre de la máquina/material a ocupar:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinerMaquinaMiercolesE2"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="339dp"
+                            android:layout_height="47dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/black"
+                            android:padding="8dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:layout_marginTop="20dp">
+                            <AutoCompleteTextView
+                                android:id="@+id/nombreEjercicio2Miercoles"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:hint="Nombre del ejercicio 2"
+                                android:inputType="textPersonName"
+                                android:textColor="@color/black"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black"
+                            >
+                            <AutoCompleteTextView
+                                android:id="@+id/pesolevantar2Miercoles"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="numberDecimal"
+                                android:hint="Peso a levantar en kilos"
+                                android:digits="0123456789."
+                                android:maxLength="5"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="#163e6c"
+                            android:text="Selecciona el nombre de la máquina/material a ocupar:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinerMaquinaMiercolesE3"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="339dp"
+                            android:layout_height="47dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/black"
+                            android:padding="8dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/nombreEjercicio3Miercoles"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName"
+                                android:hint="Nombre del ejercicio 3"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/pesolevantar3Miercoles"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="numberDecimal"
+                                android:hint="Peso a levantar en kilos"
+                                android:digits="0123456789."
+                                android:maxLength="5"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="#163e6c"
+                            android:text="Selecciona el nombre de la máquina/material a ocupar:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinerMaquinaMiercolesE4"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="339dp"
+                            android:layout_height="47dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/black"
+                            android:padding="8dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/nombreEjercicio4Miercoles"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName"
+                                android:hint="Nombre del ejercicio 4"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/pesolevantar4Miercoles"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:inputType="numberDecimal"
+                                android:hint="Peso a levantar en kilos"
+                                android:textColor="@color/black"
+                                android:digits="0123456789."
+                                android:maxLength="5"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+                <CheckBox
+                    android:id="@+id/Jueves"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:checked="false"
+                    android:buttonTint="#991918"
+                    android:textSize="14sp"
+                    android:text="Jueves"
+                    android:textColor="@color/black"/>
+
+                <ScrollView
+                    android:id="@+id/SCJueves"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:layout_below="@+id/DiaJueves"
+                    android:layout_marginTop="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/black"
+                            app:endIconTint="@color/black"
+                            app:hintTextColor="@color/black"
+                            app:startIconTint="@color/black">
+                            >
+                            <AutoCompleteTextView
+                                android:id="@+id/parteTrabajarJueves"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="false"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                android:hint="Parte a trabajar"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            app:endIconTint="@color/black"
+                            android:hint="Selecciona el número de series"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:clickable="true"
+                                android:focusable="false"
+                                android:id="@+id/etnoSeriesARJueves"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            app:endIconTint="@color/black"
+                            android:hint="Número de repeticiones para cada ejercicio"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+
+                            <AutoCompleteTextView
+                                android:clickable="true"
+                                android:focusable="false"
+                                android:id="@+id/etnoRepeticionARJueves"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="#163e6c"
+                            android:text="Selecciona el nombre de la máquina/material a ocupar:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinerMaquinaJuevesE1"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="339dp"
+                            android:layout_height="47dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/black"
+                            android:padding="8dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:layout_marginTop="20dp">
+                            <AutoCompleteTextView
+                                android:id="@+id/nombreEjercicio1Jueves"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName"
+                                android:hint="Nombre del ejercicio 1"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/pesolevantar1Jueves"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="numberDecimal"
+                                android:hint="Peso a levantar en kilos"
+                                android:digits="0123456789."
+                                android:maxLength="5"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="#163e6c"
+                            android:text="Selecciona el nombre de la máquina/material a ocupar:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinerMaquinaJuevesE2"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="339dp"
+                            android:layout_height="47dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/black"
+                            android:padding="8dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:layout_marginTop="20dp">
+                            <AutoCompleteTextView
+                                android:id="@+id/nombreEjercicio2Jueves"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:hint="Nombre del ejercicio 2"
+                                android:inputType="textPersonName"
+                                android:textColor="@color/black"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black"
+                            >
+                            <AutoCompleteTextView
+                                android:id="@+id/pesolevantar2Jueves"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="numberDecimal"
+                                android:hint="Peso a levantar en kilos"
+                                android:digits="0123456789."
+                                android:maxLength="5"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="#163e6c"
+                            android:text="Selecciona el nombre de la máquina/material a ocupar:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinerMaquinaJuevesE3"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="339dp"
+                            android:layout_height="47dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/black"
+                            android:padding="8dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/nombreEjercicio3Jueves"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName"
+                                android:hint="Nombre del ejercicio 3"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/pesolevantar3Jueves"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="numberDecimal"
+                                android:hint="Peso a levantar en kilos"
+                                android:digits="0123456789."
+                                android:maxLength="5"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="#163e6c"
+                            android:text="Selecciona el nombre de la máquina/material a ocupar:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinerMaquinaJuevesE4"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="339dp"
+                            android:layout_height="47dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/black"
+                            android:padding="8dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/nombreEjercicio4Jueves"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName"
+                                android:hint="Nombre del ejercicio 4"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/pesolevantar4Jueves"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:inputType="numberDecimal"
+                                android:hint="Peso a levantar en kilos"
+                                android:textColor="@color/black"
+                                android:digits="0123456789."
+                                android:maxLength="5"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+                <CheckBox
+                    android:id="@+id/Viernes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:checked="false"
+                    android:buttonTint="#991918"
+                    android:textSize="14sp"
+                    android:text="Viernes"
+                    android:textColor="@color/black"/>
+
+                <ScrollView
+                    android:id="@+id/SCViernes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/DiaViernes"
+                    android:visibility="gone"
+                    android:layout_marginTop="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/black"
+                            app:endIconTint="@color/black"
+                            app:hintTextColor="@color/black"
+                            app:startIconTint="@color/black">
+                            >
+                            <AutoCompleteTextView
+                                android:id="@+id/parteTrabajarViernes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="false"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                android:hint="Parte a trabajar"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            app:endIconTint="@color/black"
+                            android:hint="Selecciona el número de series"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:clickable="true"
+                                android:focusable="false"
+                                android:id="@+id/etnoSeriesARViernes"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            app:endIconTint="@color/black"
+                            android:hint="Número de repeticiones para cada ejercicio"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+
+                            <AutoCompleteTextView
+                                android:clickable="true"
+                                android:focusable="false"
+                                android:id="@+id/etnoRepeticionARViernes"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="#163e6c"
+                            android:text="Selecciona el nombre de la máquina/material a ocupar:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinerMaquinaViernesE1"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="339dp"
+                            android:layout_height="47dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/black"
+                            android:padding="8dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:layout_marginTop="20dp">
+                            <AutoCompleteTextView
+                                android:id="@+id/nombreEjercicio1Viernes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName"
+                                android:hint="Nombre del ejercicio 1"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/pesolevantar1Viernes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:inputType="numberDecimal"
+                                android:textColor="@color/black"
+                                android:hint="Peso a levantar en kilos"
+                                android:digits="0123456789."
+                                android:maxLength="5"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="#163e6c"
+                            android:text="Selecciona el nombre de la máquina/material a ocupar:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinerMaquinaViernesE2"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="339dp"
+                            android:layout_height="47dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/black"
+                            android:padding="8dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:layout_marginTop="20dp">
+                            <AutoCompleteTextView
+                                android:id="@+id/nombreEjercicio2Viernes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:hint="Nombre del ejercicio 2"
+                                android:inputType="textPersonName"
+                                android:textColor="@color/black"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black"
+                            >
+                            <AutoCompleteTextView
+                                android:id="@+id/pesolevantar2Viernes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="numberDecimal"
+                                android:hint="Peso a levantar en kilos"
+                                android:digits="0123456789."
+                                android:maxLength="5"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="#163e6c"
+                            android:text="Selecciona el nombre de la máquina/material a ocupar:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinerMaquinaViernesE3"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="339dp"
+                            android:layout_height="47dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/black"
+                            android:padding="8dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/nombreEjercicio3Viernes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName"
+                                android:hint="Nombre del ejercicio 3"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/pesolevantar3Viernes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="numberDecimal"
+                                android:hint="Peso a levantar en kilos"
+                                android:digits="0123456789."
+                                android:maxLength="5"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="#163e6c"
+                            android:text="Selecciona el nombre de la máquina/material a ocupar:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinerMaquinaViernesE4"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="339dp"
+                            android:layout_height="47dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/black"
+                            android:padding="8dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/nombreEjercicio4Viernes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName"
+                                android:hint="Nombre del ejercicio 4"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/pesolevantar4Viernes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:inputType="numberDecimal"
+                                android:hint="Peso a levantar en kilos"
+                                android:textColor="@color/black"
+                                android:digits="0123456789."
+                                android:maxLength="5"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+                <CheckBox
+                    android:id="@+id/Sabado"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:checked="false"
+                    android:buttonTint="#991918"
+                    android:textSize="14sp"
+                    android:text="Sabado"
+                    android:textColor="@color/black"/>
+
+                <ScrollView
+                    android:id="@+id/SCSabado"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:layout_below="@+id/DiaViernes"
+                    android:layout_marginTop="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/black"
+                            app:endIconTint="@color/black"
+                            app:hintTextColor="@color/black"
+                            app:startIconTint="@color/black">
+                            >
+                            <AutoCompleteTextView
+                                android:id="@+id/parteTrabajarSabado"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="false"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                android:hint="Parte a trabajar"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            app:endIconTint="@color/black"
+                            android:hint="Selecciona el número de series"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:clickable="true"
+                                android:focusable="false"
+                                android:id="@+id/etnoSeriesARSabado"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            app:endIconTint="@color/black"
+                            android:hint="Número de repeticiones para cada ejercicio"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+
+                            <AutoCompleteTextView
+                                android:clickable="true"
+                                android:focusable="false"
+                                android:id="@+id/etnoRepeticionARSabado"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="#163e6c"
+                            android:text="Selecciona el nombre de la máquina/material a ocupar:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinerMaquinaSabadoE1"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="339dp"
+                            android:layout_height="47dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/black"
+                            android:padding="8dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:layout_marginTop="20dp">
+                            <AutoCompleteTextView
+                                android:id="@+id/nombreEjercicio1Sabado"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName"
+                                android:hint="Nombre del ejercicio 1"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/pesolevantar1Sabado"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="numberDecimal"
+                                android:hint="Peso a levantar en kilos"
+                                android:digits="0123456789."
+                                android:maxLength="5"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:textColor="#163e6c"
+                        android:text="Selecciona el nombre de la máquina/material a ocupar:"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        />
+
+                        <Spinner
+                            android:id="@+id/spinerMaquinaSabadoE2"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="339dp"
+                            android:layout_height="47dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/black"
+                            android:padding="8dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:layout_marginTop="20dp">
+                            <AutoCompleteTextView
+                                android:id="@+id/nombreEjercicio2Sabado"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:hint="Nombre del ejercicio 2"
+                                android:inputType="textPersonName"
+                                android:textColor="@color/black"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black"
+                            >
+                            <AutoCompleteTextView
+                                android:id="@+id/pesolevantar2Sabado"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="numberDecimal"
+                                android:hint="Peso a levantar en kilos"
+                                android:digits="0123456789."
+                                android:maxLength="5"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="#163e6c"
+                            android:text="Selecciona el nombre de la máquina/material a ocupar:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinerMaquinaSabadoE3"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="339dp"
+                            android:layout_height="47dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/black"
+                            android:padding="8dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/nombreEjercicio3Sabado"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName"
+                                android:hint="Nombre del ejercicio 3"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/pesolevantar3Sabado"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="numberDecimal"
+                                android:hint="Peso a levantar en kilos"
+                                android:digits="0123456789."
+                                android:maxLength="5"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="#163e6c"
+                            android:text="Selecciona el nombre de la máquina/material a ocupar:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinerMaquinaSabadoE4"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="339dp"
+                            android:layout_height="47dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/black"
+                            android:padding="8dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/nombreEjercicio4Sabado"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName"
+                                android:hint="Nombre del ejercicio 4"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/pesolevantar4Sabado"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:inputType="numberDecimal"
+                                android:hint="Peso a levantar en kilos"
+                                android:textColor="@color/black"
+                                android:digits="0123456789."
+                                android:maxLength="5"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+                <CheckBox
+                    android:id="@+id/Domingo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:checked="false"
+                    android:buttonTint="#991918"
+                    android:textSize="14sp"
+                    android:text="Domingo"
+                    android:textColor="@color/black"/>
+
+                <ScrollView
+                    android:id="@+id/SCDomingo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/DiaViernes"
+                    android:visibility="gone"
+                    android:layout_marginTop="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/black"
+                            app:endIconTint="@color/black"
+                            app:hintTextColor="@color/black"
+                            app:startIconTint="@color/black">
+                            >
+                            <AutoCompleteTextView
+                                android:id="@+id/parteTrabajarDomingo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="false"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                android:hint="Parte a trabajar"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            android:hint="Selecciona el número de series"
+                            app:boxStrokeColor="@color/black"
+                            app:endIconTint="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:clickable="true"
+                                android:focusable="false"
+                                android:id="@+id/etnoSeriesARDomingo"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            app:endIconTint="@color/black"
+                            android:hint="Número de repeticiones para cada ejercicio"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+
+                            <AutoCompleteTextView
+                                android:clickable="true"
+                                android:focusable="false"
+                                android:id="@+id/etnoRepeticionARDomingo"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="#163e6c"
+                            android:text="Selecciona el nombre de la máquina/material a ocupar:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinerMaquinaDomingoE1"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="339dp"
+                            android:layout_height="47dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/black"
+                            android:padding="8dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:layout_marginTop="20dp">
+                            <AutoCompleteTextView
+                                android:id="@+id/nombreEjercicio1Domingo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName"
+                                android:hint="Nombre del ejercicio 1"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/pesolevantar1Domingo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="numberDecimal"
+                                android:hint="Peso a levantar en kilos"
+                                android:digits="0123456789."
+                                android:maxLength="5"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="#163e6c"
+                            android:text="Selecciona el nombre de la máquina/material a ocupar:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinerMaquinaDomingoE2"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="339dp"
+                            android:layout_height="47dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/black"
+                            android:padding="8dp" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:layout_marginTop="20dp">
+                            <AutoCompleteTextView
+                                android:id="@+id/nombreEjercicio2Domingo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:hint="Nombre del ejercicio 2"
+                                android:inputType="textPersonName"
+                                android:textColor="@color/black"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black"
+                            >
+                            <AutoCompleteTextView
+                                android:id="@+id/pesolevantar2Domingo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="numberDecimal"
+                                android:hint="Peso a levantar en kilos"
+                                android:digits="0123456789."
+                                android:maxLength="5"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="#163e6c"
+                            android:text="Selecciona el nombre de la máquina/material a ocupar:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinerMaquinaDomingoE3"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="339dp"
+                            android:layout_height="47dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/black"
+                            android:padding="8dp" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/nombreEjercicio3Domingo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName"
+                                android:hint="Nombre del ejercicio 3"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/pesolevantar3Domingo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="numberDecimal"
+                                android:hint="Peso a levantar en kilos"
+                                android:digits="0123456789."
+                                android:maxLength="5"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="#163e6c"
+                            android:text="Selecciona el nombre de la máquina/material a ocupar:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinerMaquinaDomingoE4"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="339dp"
+                            android:layout_height="47dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/black"
+                            android:padding="8dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/nombreEjercicio4Domingo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName"
+                                android:hint="Nombre del ejercicio 4"
+                                android:digits="abcdefghijklmñnopqrstuvwxyzáéóíúABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/black">
+                            <AutoCompleteTextView
+                                android:id="@+id/pesolevantar4Domingo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:inputType="numberDecimal"
+                                android:hint="Peso a levantar en kilos"
+                                android:textColor="@color/black"
+                                android:digits="0123456789."
+                                android:maxLength="5"
+                                android:textColorHint="@color/black"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="341dp"
+        android:layout_height="57dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="180dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="0dp">
+
+        <Button
+            android:id="@+id/GuardarR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:elevation="10dp"
+            android:background="@drawable/bg_inicios"
+            android:text="Registrar Rutina"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</RelativeLayout>

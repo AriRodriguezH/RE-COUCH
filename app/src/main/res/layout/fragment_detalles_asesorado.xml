@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".detallesAsesorado"
+    android:id="@+id/contjent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/miokey"
+    android:orientation="vertical"
+    android:background="@color/white"
+   >
+
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="14dp"
+        android:background="@color/black"
+        android:layout_weight="28">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnRegresarDA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#4F4F4F"
+            app:srcCompat="@drawable/ic_backwhite" />
+
+
+        <ImageView
+            android:layout_width="57dp"
+            android:layout_height="50dp"
+            android:id="@+id/deleteAsesorado"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="9dp"
+            android:layout_marginLeft="310dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_baseline_delete_forever_24" />
+
+        <Switch
+            android:id="@+id/fabi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="6dp"
+            android:layout_marginBottom="1dp"
+            android:elevation="15dp"
+            android:textOff="OFF"
+            android:textOn="ON"
+            android:thumb="@drawable/switchedit"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <AutoCompleteTextView
+            android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="1dp"
+            android:layout_marginBottom="45dp"
+            android:layout_toRightOf="@+id/fabi"
+            android:enabled="false"
+            android:text="Titulo"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <AutoCompleteTextView
+            android:id="@+id/tituldo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/titulo"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="91dp"
+            android:layout_marginBottom="45dp"
+            android:layout_toRightOf="@+id/fabi"
+            android:enabled="false"
+            android:text="Titueddelo"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <AutoCompleteTextView
+            android:id="@+id/apellidoMDA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tituldo"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="130dp"
+            android:layout_marginBottom="43dp"
+            android:layout_toRightOf="@+id/fabi"
+            android:enabled="false"
+            android:text="Titueddelo"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/idEdadDA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="252dp"
+            android:layout_marginBottom="15dp"
+            android:layout_toRightOf="@+id/fabi"
+            android:text="Edad"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <!-- Datos de la meta -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="70"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <AutoCompleteTextView
+            android:id="@+id/idfechanacimientoDA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:enabled="false"
+            android:focusable="false"
+            android:inputType="date"
+            android:layout_below="@+id/txtFechamacimientoDA"
+            android:text="datofecha"
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/idRutinaDA"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/txtRutinaDA"
+            android:layout_marginStart="190dp"
+            android:layout_marginTop="10dp"
+            android:focusable="false"
+            android:clickable="false"
+            android:text="rv"
+            android:textColor="@color/black"
+            android:defaultFocusHighlightEnabled="false"
+            android:saveEnabled="false"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/black"
+            android:ems="10" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="wrap_content"
+            android:id="@+id/idSejxoDA"
+            android:enabled="false"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColorHint="@color/black"
+            android:layout_below="@+id/txtSexoDA"
+            app:boxStrokeColor="@color/black"
+            app:endIconTint="@color/black"
+            app:hintTextColor="@color/black"
+            app:startIconTint="@color/black"
+            android:layout_marginBottom="16dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/selectSex"
+                android:clickable="false"
+                android:focusable="false"
+                android:enabled="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/txtSexoDA"
+                android:text="sexoasesorado"
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+              />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <AutoCompleteTextView
+            android:id="@+id/idAlturaDA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtAlturaDA"
+            android:text="AlturaAsesorado"
+            android:digits="0123456789."
+            android:maxLength="8"
+            android:inputType="numberDecimal"
+            android:enabled="false"
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_marginBottom="16dp" />
+
+        <AutoCompleteTextView
+            android:id="@+id/idPesoDA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtPesoDA"
+            android:text="PesoAsesorado"
+            android:digits="0123456789."
+            android:maxLength="9"
+            android:enabled="false"
+            android:inputType="numberDecimal"
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_marginBottom="16dp"/>
+
+        <AutoCompleteTextView
+            android:id="@+id/idTallaDA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTallaDA"
+            android:text="TallaAsesorado"
+            android:digits="0123456789."
+            android:maxLength="8"
+            android:enabled="false"
+            android:inputType="numberDecimal"
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_marginBottom="16dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="wrap_content"
+            android:id="@+id/idEstadoDA"
+            android:enabled="false"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColorHint="@color/black"
+            android:layout_below="@+id/txtEstadoDA"
+            app:boxStrokeColor="@color/black"
+            app:endIconTint="@color/black"
+            app:hintTextColor="@color/black"
+            app:startIconTint="@color/black"
+            android:layout_marginBottom="16dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/selectEstado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtEstadoDA"
+                android:text="EstadoAsesorado"
+                android:clickable="false"
+                android:enabled="false"
+                android:focusable="false"
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <AutoCompleteTextView
+            android:id="@+id/idEntrenadorDA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtEntrenadorDA"
+            android:text="EntrenadorAsesorado"
+            android:textColor="@color/black"
+            android:enabled="false"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_marginBottom="16dp"/>
+
+
+        <TextView
+            android:id="@+id/txtFechamacimientoDA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha de Nacimiento:"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black" />
+        <TextView
+            android:id="@+id/txtRutinaDA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/txtFechamacimientoDA"
+            android:layout_marginLeft="257dp"
+            android:text="Rutina actual:"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/txtSexoDA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idfechanacimientoDA"
+            android:text="Sexo:"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/txtAlturaDA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idSejxoDA"
+            android:text="Altura:"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/txtPesoDA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idAlturaDA"
+            android:text="Peso"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/txtTallaDA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idPesoDA"
+            android:text="Talla:"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/txtEstadoDA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idTallaDA"
+            android:text="Estado dentro del GYM:"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/txtEntrenadorDA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idEstadoDA"
+            android:text="Entranador Acargo:"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black" />
+
+        <AutoCompleteTextView
+            android:id="@+id/vvv"
+            android:layout_width="61dp"
+            android:layout_height="66dp"
+            android:text="f"
+            android:enabled="false"
+            android:visibility="gone"
+            android:textSize="35dp"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/btnhabilitado"
+        android:layout_width="341dp"
+        android:layout_height="57dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="0dp">
+
+        <Button
+
+            android:id="@+id/btnGuardarDetalles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+            android:elevation="10dp"
+            android:background="@drawable/bg_inicios"
+            android:text="Guardar Cambios"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>
+</FrameLayout>
