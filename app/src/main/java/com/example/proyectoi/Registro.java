@@ -70,7 +70,7 @@ public class Registro extends Fragment {
 
 
 
-/*Inicio Metodo de Fechas visualización*/
+        /*Inicio Metodo de Fechas visualización*/
 
         fechanacimiento.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -212,9 +212,14 @@ public class Registro extends Fragment {
                     contrasenia.setError("Completa el campo de Contraseña");
                 }else {
                     progressDialog.show();
-                    String url="http://192.168.1.65/Alumno/insertEntrenador.php?nombre="+Nombre+"&apellidop="+ApellidoP+"&apellidom="+ApellidoM+
-                            "&fechanacimiento="+fechaNacimiento+"&notelefono="+NumeroTelefono+"&sexo="+Sexo+"&correo="+email+"&contrasenia="+
-                            Contrasenia;
+                    String url="http://192.168.1.12/Alumno/insertEntrenador.php?nombre="+Nombre+
+                            "&apellidop="+ApellidoP+
+                            "&apellidom="+ApellidoM+
+                            "&fechanacimiento="+fechaNacimiento+
+                            "&notelefono="+NumeroTelefono+
+                            "&sexo="+Sexo+
+                            "&correo="+email+
+                            "&contrasenia="+ Contrasenia;
 
                     JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                             Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
@@ -253,5 +258,6 @@ public class Registro extends Fragment {
             }
         });
     }
+
 
 }

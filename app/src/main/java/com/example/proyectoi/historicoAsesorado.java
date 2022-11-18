@@ -55,21 +55,20 @@ public class historicoAsesorado extends Fragment {
                               @Nullable Bundle savedInstanceState) {
         FloatingActionButton btnVolverI = view.findViewById(R.id.btnRegresar);
         Button btnAceptar = view.findViewById(R.id.aceptarHA);
-        // EditText Idasesorado = view.findViewById(R.id.etIDAsesoradoHA);
         EditText Peso = view.findViewById(R.id.etPesoHA);
         EditText Altura = view.findViewById(R.id.etAlturaHA);
         EditText Talla = view.findViewById(R.id.etTallaHA);
         requestQueue2 = Volley.newRequestQueue(getContext());
         spinnerCountry = view.findViewById(R.id.spinnerCountry);
 
-        String url2 = "http://192.168.1.65/Alumno/spinerAsesorado.php";
+        String url2 = "http://192.168.1.12/Alumno/spinerAsesorado.php";
         JsonObjectRequest jsonObjectRequest2 = new JsonObjectRequest(Request.Method.POST,
                 url2, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 try {
                     JSONArray jsonArray = response.getJSONArray("asesorado");
-                    for(int i=0; i<jsonArray.length();i++){
+                    for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
                         String countryName = jsonObject.optString("nombre");
                         String countryID = jsonObject.optString("idasesorado");
@@ -121,17 +120,20 @@ public class historicoAsesorado extends Fragment {
                 final ProgressDialog progressDialog = new ProgressDialog(getActivity());
                 progressDialog.setMessage("Cargando");
 
-                if (AlturaHA.isEmpty()){
+                if (AlturaHA.isEmpty()) {
                     Altura.setError("Completa el campo de Altura");
-                }else if (PesoHA.isEmpty()){
+                } else if (PesoHA.isEmpty()) {
                     Peso.setError("Completa el campo de Peso");
-                }else if (TallaHA.isEmpty()){
+                } else if (TallaHA.isEmpty()) {
                     Talla.setError("Completa el campo de Talla");
-                }else if (IDASESORADO.isEmpty()&& idlist.isEmpty()){
+                } else if (IDASESORADO.isEmpty() && idlist.isEmpty()) {
                     spinnerCountry.getAdapter().isEmpty();
-                }else {
+                } else {
                     progressDialog.show();
-                    String url="http://192.168.1.65/Alumno/insertHistoricoasesorado.php?altura="+AlturaHA+"&peso="+PesoHA+"&talla="+TallaHA+"&idasesorado="+IDASESORADO;
+                    String url = "http://192.168.1.12/Alumno/insertHistoricoasesorado.php?altura=" + AlturaHA +
+                            "&peso=" + PesoHA +
+                            "&talla=" + TallaHA +
+                            "&idasesorado=" + IDASESORADO;
 
                     JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                             Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
@@ -154,5 +156,4 @@ public class historicoAsesorado extends Fragment {
         });
 
     }
-
 }

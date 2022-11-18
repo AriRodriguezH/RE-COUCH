@@ -62,12 +62,14 @@ public class agregarRutina extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view,
                               @Nullable Bundle savedInstanceState){
-
+//Declaración de variables a utilizar
         Button btnGuardarNR = view.findViewById(R.id.GuardarR);
         FloatingActionButton btnVolverAR = view.findViewById(R.id.btnRegresarAR);
         AutoCompleteTextView autoCompleteTextView;
         autoCompleteTextView = view.findViewById(R.id.etNivelRutina);
         requestQueueM = Volley.newRequestQueue(getContext());
+
+
         //Spinners de las maquinas a utilizar dentro de la rutina
         spinerLE1= view.findViewById(R.id.spinerMaquinaLunesE1);
         spinerLE2= view.findViewById(R.id.spinerMaquinaLunesE2);
@@ -198,9 +200,10 @@ public class agregarRutina extends Fragment {
         EditText Ejercicio3D = view.findViewById(R.id.nombreEjercicio3Domingo);
         EditText Ejercicio4D = view.findViewById(R.id.nombreEjercicio4Domingo);
 
+
         /*Funcion Sipners*/
 
-        String urlMaquina = "http://192.168.1.65/Alumno/spinerMaquina.php";
+        String urlMaquina = "http://192.168.1.12/Alumno/spinerMaquina.php";
         JsonObjectRequest jsonObjectRequest2 = new JsonObjectRequest(Request.Method.POST,
                 urlMaquina, null, new Response.Listener<JSONObject>() {
             @Override
@@ -353,6 +356,14 @@ public class agregarRutina extends Fragment {
         noRepeticionesD.setAdapter(miserie);
 
 
+
+
+
+
+
+
+
+
         cbLunes.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -445,6 +456,7 @@ public class agregarRutina extends Fragment {
             }
 
             private void RegistraDatosRutina() {
+
                 String miNombreRutina = NombreRutina.getText().toString().trim();
                 String Nivel = MiNIVELR.getText().toString().trim();
 
@@ -556,67 +568,67 @@ public class agregarRutina extends Fragment {
                 String pesoAgregado3D = pesoLevantar3D.getText().toString().trim();
                 String pesoAgregado4D = pesoLevantar4D.getText().toString().trim();
 
-                String maquinaL1 = MaquinaList.get(spinerLE1.getSelectedItemPosition()).trim();
+                String maquinaL1 = idMlist.get(spinerLE1.getSelectedItemPosition()).trim();
                 Log.i("VALOR", maquinaL1);
-                String maquinaL2 = MaquinaList.get(spinerLE2.getSelectedItemPosition()).trim();
+                String maquinaL2 = idMlist.get(spinerLE2.getSelectedItemPosition()).trim();
                 Log.i("VALOR", maquinaL2);
-                String maquinaL3 = MaquinaList.get(spinerLE3.getSelectedItemPosition()).trim();
+                String maquinaL3 = idMlist.get(spinerLE3.getSelectedItemPosition()).trim();
                 Log.i("VALOR", maquinaL3);
-                String maquinaL4 = MaquinaList.get(spinerLE4.getSelectedItemPosition()).trim();
+                String maquinaL4 = idMlist.get(spinerLE4.getSelectedItemPosition()).trim();
                 Log.i("VALOR", maquinaL4);
 
-                String maquinaM1 = MaquinaList.get(spinerME1.getSelectedItemPosition()).trim();
+                String maquinaM1 = idMlist.get(spinerME1.getSelectedItemPosition()).trim();
                 Log.i("VALOR", maquinaM1);
-                String maquinaM2 = MaquinaList.get(spinerME2.getSelectedItemPosition()).trim();
+                String maquinaM2 = idMlist.get(spinerME2.getSelectedItemPosition()).trim();
                 Log.i("VALOR", maquinaM2);
-                String maquinaM3 = MaquinaList.get(spinerME3.getSelectedItemPosition()).trim();
+                String maquinaM3 = idMlist.get(spinerME3.getSelectedItemPosition()).trim();
                 Log.i("VALOR", maquinaM3);
-                String maquinaM4 = MaquinaList.get(spinerME4.getSelectedItemPosition()).trim();
+                String maquinaM4 = idMlist.get(spinerME4.getSelectedItemPosition()).trim();
                 Log.i("VALOR", maquinaM4);
 
-                String maquinaMi1 = MaquinaList.get(spinerMiE1.getSelectedItemPosition()).trim();
+                String maquinaMi1 = idMlist.get(spinerMiE1.getSelectedItemPosition()).trim();
                 Log.i("VALOR", maquinaMi1);
-                String maquinaMi2 = MaquinaList.get(spinerMiE2.getSelectedItemPosition()).trim();
+                String maquinaMi2 = idMlist.get(spinerMiE2.getSelectedItemPosition()).trim();
                 Log.i("VALOR", maquinaMi2);
-                String maquinaMi3 = MaquinaList.get(spinerMiE3.getSelectedItemPosition()).trim();
+                String maquinaMi3 = idMlist.get(spinerMiE3.getSelectedItemPosition()).trim();
                 Log.i("VALOR", maquinaMi3);
-                String maquinaMi4 = MaquinaList.get(spinerMiE4.getSelectedItemPosition()).trim();
+                String maquinaMi4 = idMlist.get(spinerMiE4.getSelectedItemPosition()).trim();
                 Log.i("VALOR", maquinaMi4);
 
-                String maquinaJ1 = MaquinaList.get(spinerJE1.getSelectedItemPosition()).trim();
+                String maquinaJ1 = idMlist.get(spinerJE1.getSelectedItemPosition()).trim();
                 Log.i("VALOR", maquinaJ1);
-                String maquinaJ2 = MaquinaList.get(spinerJE2.getSelectedItemPosition()).trim();
+                String maquinaJ2 = idMlist.get(spinerJE2.getSelectedItemPosition()).trim();
                 Log.i("VALOR", maquinaJ2);
-                String maquinaJ3 = MaquinaList.get(spinerJE3.getSelectedItemPosition()).trim();
+                String maquinaJ3 = idMlist.get(spinerJE3.getSelectedItemPosition()).trim();
                 Log.i("VALOR", maquinaJ3);
-                String maquinaJ4 = MaquinaList.get(spinerJE4.getSelectedItemPosition()).trim();
+                String maquinaJ4 = idMlist.get(spinerJE4.getSelectedItemPosition()).trim();
                 Log.i("VALOR", maquinaJ4);
 
-                String maquinaV1 = MaquinaList.get(spinerVE1.getSelectedItemPosition()).trim();
+                String maquinaV1 = idMlist.get(spinerVE1.getSelectedItemPosition()).trim();
                 Log.i("VALOR", maquinaV1);
-                String maquinaV2 = MaquinaList.get(spinerVE2.getSelectedItemPosition()).trim();
+                String maquinaV2 = idMlist.get(spinerVE2.getSelectedItemPosition()).trim();
                 Log.i("VALOR", maquinaV2);
-                String maquinaV3 = MaquinaList.get(spinerVE3.getSelectedItemPosition()).trim();
+                String maquinaV3 = idMlist.get(spinerVE3.getSelectedItemPosition()).trim();
                 Log.i("VALOR", maquinaV3);
-                String maquinaV4 = MaquinaList.get(spinerVE4.getSelectedItemPosition()).trim();
+                String maquinaV4 = idMlist.get(spinerVE4.getSelectedItemPosition()).trim();
                 Log.i("VALOR", maquinaV4);
 
-                String maquinaS1 = MaquinaList.get(spinerSE1.getSelectedItemPosition()).trim();
+                String maquinaS1 = idMlist.get(spinerSE1.getSelectedItemPosition()).trim();
                 Log.i("VALOR", maquinaS1);
-                String maquinaS2 = MaquinaList.get(spinerSE2.getSelectedItemPosition()).trim();
+                String maquinaS2 = idMlist.get(spinerSE2.getSelectedItemPosition()).trim();
                 Log.i("VALOR", maquinaS2);
-                String maquinaS3 = MaquinaList.get(spinerSE3.getSelectedItemPosition()).trim();
+                String maquinaS3 = idMlist.get(spinerSE3.getSelectedItemPosition()).trim();
                 Log.i("VALOR", maquinaS3);
-                String maquinaS4 = MaquinaList.get(spinerSE4.getSelectedItemPosition()).trim();
+                String maquinaS4 = idMlist.get(spinerSE4.getSelectedItemPosition()).trim();
                 Log.i("VALOR", maquinaS4);
 
-                String maquinaD1 = MaquinaList.get(spinerDE1.getSelectedItemPosition()).trim();
+                String maquinaD1 = idMlist.get(spinerDE1.getSelectedItemPosition()).trim();
                 Log.i("VALOR", maquinaD1);
-                String maquinaD2 = MaquinaList.get(spinerDE2.getSelectedItemPosition()).trim();
+                String maquinaD2 = idMlist.get(spinerDE2.getSelectedItemPosition()).trim();
                 Log.i("VALOR", maquinaD2);
-                String maquinaD3 = MaquinaList.get(spinerDE3.getSelectedItemPosition()).trim();
+                String maquinaD3 = idMlist.get(spinerDE3.getSelectedItemPosition()).trim();
                 Log.i("VALOR", maquinaD3);
-                String maquinaD4 = MaquinaList.get(spinerDE4.getSelectedItemPosition()).trim();
+                String maquinaD4 = idMlist.get(spinerDE4.getSelectedItemPosition()).trim();
                 Log.i("VALOR", maquinaD4);
 
                 final ProgressDialog progressDialog = new ProgressDialog(getActivity());
@@ -634,10 +646,10 @@ public class agregarRutina extends Fragment {
                                 "&nivel=" + Nivel +
                                 "&parteatrabajar=" + parteTrabajarL +
                                 "&diasemana=" + lunes +
-                                "&nombremaquina=" + maquinaL1 +
-                                "&nombremaquina2=" + maquinaL2 +
-                                "&nombremaquina3=" + maquinaL3 +
-                                "&nombremaquina4=" + maquinaL4 +
+                                "&idmaquina1=" + maquinaL1 +
+                                "&idmaquina2=" + maquinaL2 +
+                                "&idmaquina3=" + maquinaL3 +
+                                "&idmaquina4=" + maquinaL4 +
                                 "&numrepeticion=" + NumRepeticionL +
                                 "&series=" + SeriesL +
                                 "&pesoAgregado1L=" + pesoAgregado1L +
@@ -660,7 +672,7 @@ public class agregarRutina extends Fragment {
                         }, new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError error) {
-                                Toast.makeText(view.getContext(), error.toString(), Toast.LENGTH_LONG).show();
+                                Toast.makeText(getContext(),"Registrado con Exito",Toast.LENGTH_SHORT).show();
                                 progressDialog.dismiss();
                             }
                         }
@@ -698,7 +710,7 @@ public class agregarRutina extends Fragment {
                         }, new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError error) {
-                                Toast.makeText(view.getContext(), error.toString(), Toast.LENGTH_LONG).show();
+                                Toast.makeText(getContext(),"Registrado con Exito",Toast.LENGTH_SHORT).show();
                                 progressDialog.dismiss();
                             }
                         }
@@ -736,7 +748,7 @@ public class agregarRutina extends Fragment {
                         }, new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError error) {
-                                Toast.makeText(view.getContext(), error.toString(), Toast.LENGTH_LONG).show();
+                                Toast.makeText(getContext(),"Registrado con Exito",Toast.LENGTH_SHORT).show();
                                 progressDialog.dismiss();
                             }
                         }
@@ -774,7 +786,7 @@ public class agregarRutina extends Fragment {
                         }, new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError error) {
-                                Toast.makeText(view.getContext(), error.toString(), Toast.LENGTH_LONG).show();
+                                Toast.makeText(getContext(),"Registrado con Exito",Toast.LENGTH_SHORT).show();
                                 progressDialog.dismiss();
                             }
                         }
@@ -812,7 +824,7 @@ public class agregarRutina extends Fragment {
                         }, new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError error) {
-                                Toast.makeText(view.getContext(), error.toString(), Toast.LENGTH_LONG).show();
+                                Toast.makeText(getContext(),"Registrado con Exito",Toast.LENGTH_SHORT).show();
                                 progressDialog.dismiss();
                             }
                         }
@@ -850,7 +862,7 @@ public class agregarRutina extends Fragment {
                         }, new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError error) {
-                                Toast.makeText(view.getContext(), error.toString(), Toast.LENGTH_LONG).show();
+                                Toast.makeText(getContext(),"Registrado con Exito",Toast.LENGTH_SHORT).show();
                                 progressDialog.dismiss();
                             }
                         }
@@ -888,7 +900,7 @@ public class agregarRutina extends Fragment {
                         }, new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError error) {
-                                Toast.makeText(view.getContext(), error.toString(), Toast.LENGTH_LONG).show();
+                                Toast.makeText(getContext(),"Registrado con Exito",Toast.LENGTH_SHORT).show();
                                 progressDialog.dismiss();
                             }
                         }

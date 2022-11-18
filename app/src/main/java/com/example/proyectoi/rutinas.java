@@ -34,7 +34,6 @@ import java.util.ArrayList;
 
 
 public class rutinas extends Fragment {
-
     RecyclerView recyclerRutinass;
     ArrayList<ConsultarRutinas> listaRutinas;
     ProgressDialog progress;
@@ -74,7 +73,7 @@ public class rutinas extends Fragment {
         progress.setMessage("Consultando...");
         progress.show();
 
-        String url="http://192.168.1.65/Alumno/getRutinas.php";
+        String url="http://192.168.1.12/Alumno/getRutinas.php";
 
         jsonObjectRequest=new JsonObjectRequest(Request.Method.GET, url, (JSONObject) null, new Response.Listener<JSONObject>() {
             @Override

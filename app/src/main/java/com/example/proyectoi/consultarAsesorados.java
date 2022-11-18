@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -35,8 +36,10 @@ public class consultarAsesorados extends Fragment {
 
     RecyclerView recyclerUsuarios;
     ArrayList<Usuario> listaUsuarios;
+    TextView  idE;
     ProgressDialog progress;
     JsonObjectRequest jsonObjectRequest;
+    private PreferenceHelper preferenceHelper;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -56,6 +59,9 @@ public class consultarAsesorados extends Fragment {
         recyclerUsuarios.setLayoutManager(new LinearLayoutManager(this.getContext()));
         recyclerUsuarios.setHasFixedSize(true);
 
+        preferenceHelper = new PreferenceHelper(getContext());
+
+        idE= vista.findViewById(R.id.identrenadorCA);
 
         //Cargar método de los servicios
         cargarWebService();
@@ -74,7 +80,12 @@ public class consultarAsesorados extends Fragment {
         progress.setMessage("Consultando...");
         progress.show();
 
-        String url="http://192.168.1.65/Alumno/getAsesorado.php";
+        //String Nombre = nombre.getText().toString().trim();
+        idE.setText(preferenceHelper.getHobby());
+        String ID= String.valueOf(idE.getText());
+        Log.i("VALOR", ID);
+
+        String url="http://192.168.1.12/Alumno/pruebaAIDE.php?identrenador="+idE.getText();
 
         jsonObjectRequest=new JsonObjectRequest(Request.Method.GET, url, (JSONObject) null, new Response.Listener<JSONObject>() {
             @Override

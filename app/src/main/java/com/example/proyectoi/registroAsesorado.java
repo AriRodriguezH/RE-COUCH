@@ -343,12 +343,24 @@ public class registroAsesorado extends Fragment {
                     //idlist.get(SpinerEntreador.getTextAlignment());
                 }
                 else if (IdRutina.isEmpty()&& idRlist.isEmpty()){
-                      SpinerEntreador.getAdapter().isEmpty();
-                      idRlist.isEmpty();
+                    SpinerEntreador.getAdapter().isEmpty();
+                    idRlist.isEmpty();
                 }else {
                     progressDialog.show();
-                    String url="http://192.168.1.65/Alumno/insertAsesorado.php?nombre="+NombreRA+"&apellidop="+ApellidoPRA+"&apellidom="+ApellidoMRA+
-                            "&fechanacimiento="+fechaNacimientoRA+"&altura="+Altura+"&peso="+Peso+"&talla="+Talla+"&sexo="+Sexo+"&fecharegistro="+FechaRegistro+"&estado="+EstadoAsesorado+"&identrenador="+IdEntrenador+"&idrutina="+IdRutina+"&fechainicio="+FechaInicioR+"&fechafinalizacion="+FechaFinR;
+                    String url="http://192.168.1.65/Alumno/insertAsesorado.php?nombre="+NombreRA+
+                            "&apellidop="+ApellidoPRA+
+                            "&apellidom="+ApellidoMRA+
+                            "&fechanacimiento="+fechaNacimientoRA+
+                            "&altura="+Altura+
+                            "&peso="+Peso+
+                            "&talla="+Talla+
+                            "&sexo="+Sexo+
+                            "&fecharegistro="+FechaRegistro+
+                            "&estado="+EstadoAsesorado+
+                            "&identrenador="+IdEntrenador+
+                            "&idrutina="+IdRutina+
+                            "&fechainicio="+FechaInicioR+
+                            "&fechafinalizacion="+FechaFinR;
 
                     JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                             Request.Method.GET, url , null, new Response.Listener<JSONObject>() {
