@@ -10,6 +10,15 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="id"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:id="@+id/identrenadorInformeA"
+        />
+
     <TextView
         android:id="@+id/tvInformeA"
         android:layout_width="wrap_content"
@@ -57,6 +66,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ScrollView
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/txtRegistro">
@@ -90,7 +100,19 @@
 
             </LinearLayout>
         </ScrollView>
-
+        <com.androidplot.xy.XYPlot
+            style="@style/APDefacto.Dark"
+            android:id="@+id/plot"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            ap:title="Informes"
+            ap:rangeTitle="Peso"
+            ap:domainTitle="Mes"
+            ap:lineLabels="left|bottom"
+            ap:lineLabelRotationBottom="-45"/>
     </LinearLayout>
+
+
 
 </RelativeLayout>

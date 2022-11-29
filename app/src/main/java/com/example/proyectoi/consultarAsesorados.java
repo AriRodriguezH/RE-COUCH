@@ -6,7 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -36,7 +36,7 @@ public class consultarAsesorados extends Fragment {
 
     RecyclerView recyclerUsuarios;
     ArrayList<Usuario> listaUsuarios;
-    TextView  idE;
+    EditText miIDUSER;
     ProgressDialog progress;
     JsonObjectRequest jsonObjectRequest;
     private PreferenceHelper preferenceHelper;
@@ -59,14 +59,28 @@ public class consultarAsesorados extends Fragment {
         recyclerUsuarios.setLayoutManager(new LinearLayoutManager(this.getContext()));
         recyclerUsuarios.setHasFixedSize(true);
 
+        miIDUSER = vista.findViewById(R.id.identrenadorCA);
         preferenceHelper = new PreferenceHelper(getContext());
-
-        idE= vista.findViewById(R.id.identrenadorCA);
+        miIDUSER.setText(preferenceHelper.getHobby());
 
         //Cargar método de los servicios
         cargarWebService();
 
         return vista;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view,
+                              @Nullable Bundle savedInstanceState){
+
+        FloatingActionButton btnVolverICA = view.findViewById(R.id.btnRegresarCA);
+
+        btnVolverICA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_onsultarAsesorados_to_inMenu);
+            }
+        });
     }
 
 
@@ -80,16 +94,15 @@ public class consultarAsesorados extends Fragment {
         progress.setMessage("Consultando...");
         progress.show();
 
-        //String Nombre = nombre.getText().toString().trim();
-        idE.setText(preferenceHelper.getHobby());
-        String ID= String.valueOf(idE.getText());
-        Log.i("VALOR", ID);
+        String IDENTRENADOR = miIDUSER.getText().toString();
+        Log.i("IDUSER", IDENTRENADOR);
 
-        String url="http://192.168.1.12/Alumno/pruebaAIDE.php?identrenador="+idE.getText();
-
-        jsonObjectRequest=new JsonObjectRequest(Request.Method.GET, url, (JSONObject) null, new Response.Listener<JSONObject>() {
+        String url="https://gdxblackstar.000webhostapp.com/getAsesorado.php?identrenador="+IDENTRENADOR;
+        Log.e("URL", url);
+        jsonObjectRequest=new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
+
                 Usuario usuario=null;
 
                 JSONArray json=response.optJSONArray("asesorado");
@@ -111,7 +124,6 @@ public class consultarAsesorados extends Fragment {
                         usuario.setNombreEntrenador(jsonObject.optString("nombreEntrenador"));
                         usuario.setNombreRutina(jsonObject.optString("nombrerutina"));
                         usuario.setEdad(jsonObject.optString("edad")+" años");
-                        //usuario.setIdasesorado(Integer.valueOf(jsonObject.optString("idasesorado")));
                         listaUsuarios.add(usuario);
                     }
                     progress.hide();
@@ -135,19 +147,6 @@ public class consultarAsesorados extends Fragment {
             }
         });
         requestQueue.add(jsonObjectRequest);
-    }
-
-    @Override
-    public void onViewCreated(@NonNull View view,
-                              @Nullable Bundle savedInstanceState){
-        FloatingActionButton btnVolverICA = view.findViewById(R.id.btnRegresarCA);
-        btnVolverICA.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_onsultarAsesorados_to_inMenu);
-            }
-        });
-
     }
 
 }

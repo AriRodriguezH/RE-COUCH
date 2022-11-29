@@ -75,11 +75,13 @@ public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioAdapter.Usuarios
 
     public class UsuariosHolder extends RecyclerView.ViewHolder{
 
-        TextView txtNombre,txtApellidoP,txtApellidoM, txtaltura,txtpeso,txttalla,txtsexo,txtfechasNacimiento,txtEstado,txtEntrenador,txtEdad,txtID,txtRutinaName;
+        TextView txtNombre,txtApellidoP,txtApellidoM, txtaltura,txtpeso,txttalla,
+                txtsexo,txtfechasNacimiento,txtEstado,txtEntrenador,txtEdad,txtID,txtRutinaName, txtidEntrenar;
         ImageView MIDasesad;
 
         public UsuariosHolder(View itemView) {
             super(itemView);
+            txtidEntrenar=(TextView)itemView.findViewById(R.id.identrenar);
             txtNombre= (TextView) itemView.findViewById(R.id.txtNombre);
             txtApellidoP = (TextView) itemView.findViewById(R.id.txtapeliidop);
             txtApellidoM = (TextView) itemView.findViewById(R.id.txtapellidom);

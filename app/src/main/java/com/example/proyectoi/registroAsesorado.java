@@ -34,22 +34,21 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
+
 public class registroAsesorado extends Fragment {
-    Spinner SpinerEntreador;
     Spinner SpinerRutina;
-    ArrayList<String> nombreElist = new ArrayList<>();
-    ArrayList<String> idlist = new ArrayList<>();
+    EditText IdEntrenadorRA;
     ArrayList<String> nombreRlist = new ArrayList<>();
     ArrayList<String> idRlist = new ArrayList<>();
-    ArrayAdapter<String> NombreAdapter;
     RequestQueue requestQueueEntrenador;
     ArrayAdapter<String> NombreRAdapter;
     RequestQueue requestQueueRutina;
+    private PreferenceHelper preferenceHelper;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
@@ -76,12 +75,17 @@ public class registroAsesorado extends Fragment {
         Button RegistrarA = view.findViewById(R.id.btnRegistroAsesorado);
         requestQueueRutina = Volley.newRequestQueue(getContext());
         requestQueueEntrenador = Volley.newRequestQueue(getContext());
-        SpinerEntreador= view.findViewById(R.id.etIdEntrenadorRA);
         SpinerRutina = view.findViewById(R.id.etRutinaRA);
         FloatingActionButton btnVolverIRA = view.findViewById(R.id.btnRegresarRA);
 
+        IdEntrenadorRA = view.findViewById(R.id.identrenadorRA);
+        preferenceHelper = new PreferenceHelper(getContext());
+        IdEntrenadorRA.setText(preferenceHelper.getHobby());
+
+        String IDEntrenadorRA = IdEntrenadorRA.getText().toString();
+
         /*SPINER FUNCIÓN*/
-        String url2 = "http://192.168.1.65/Alumno/spinerRutina.php";
+        String url2 = "https://gdxblackstar.000webhostapp.com/spinerRutina.php";
         JsonObjectRequest jsonObjectRequest2 = new JsonObjectRequest(Request.Method.POST,
                 url2, null, new Response.Listener<JSONObject>() {
             @Override
@@ -112,38 +116,6 @@ public class registroAsesorado extends Fragment {
         });
         requestQueueRutina.add(jsonObjectRequest2);
         SpinerRutina.setAdapter(NombreRAdapter);
-
-        String url3 = "http://192.168.1.65/Alumno/spinerEntrenador.php";
-        JsonObjectRequest jsonObjectRequest3 = new JsonObjectRequest(Request.Method.POST,
-                url3, null, new Response.Listener<JSONObject>() {
-            @Override
-            public void onResponse(JSONObject response) {
-                try {
-                    JSONArray jsonArray = response.getJSONArray("entrenador");
-                    for(int i=0; i<jsonArray.length();i++){
-                        JSONObject jsonObject = jsonArray.getJSONObject(i);
-                        String EntrenadorName = jsonObject.optString("nombre");
-                        String EntrenadorID = jsonObject.optString("identrenador");
-                        nombreElist.add(EntrenadorName);
-                        idlist.add(EntrenadorID);
-                        NombreAdapter = new ArrayAdapter<>(getActivity(),
-                                R.layout.spinner_entrenador, nombreElist);
-                        NombreAdapter.setDropDownViewResource(R.layout.spinner_entrenador);
-                        SpinerEntreador.setAdapter(NombreAdapter);
-
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-
-            }
-        });
-        requestQueueEntrenador.add(jsonObjectRequest3);
-        SpinerEntreador.setAdapter(NombreAdapter);
 
 
         /*Inicio Metodo de Fechas visualización*/
@@ -304,16 +276,30 @@ public class registroAsesorado extends Fragment {
                 String FechaInicioR= fechaInicioR.getText().toString().trim();
                 String FechaFinR= fechaFinR.getText().toString().trim();
                 String EstadoAsesorado = estadoG.getText().toString().trim();
-                String IdEntrenador = idlist.get(SpinerEntreador.getSelectedItemPosition()).trim();
                 String IdRutina = idRlist.get(SpinerRutina.getSelectedItemPosition()).trim();
                 Log.i("VALOR", IdRutina);
 
                 final ProgressDialog progressDialog = new ProgressDialog(getActivity());
                 progressDialog.setMessage("Cargando");
 
-                if(NombreRA.isEmpty()){
+                if(NombreRA.isEmpty()&&ApellidoPRA.isEmpty()&&ApellidoMRA.isEmpty()&&fechaNacimientoRA.isEmpty()
+                &&Altura.isEmpty()&&Peso.isEmpty()&&Talla.isEmpty()&&Sexo.isEmpty()&&FechaRegistro.isEmpty()
+                &&FechaFinR.isEmpty()&&EstadoAsesorado.isEmpty()){
                     nombre.setError("Complete el campo de Nombre");
+                    apellidop.setError("Completa el campo de Apellido Paterno");
+                    apellidom.setError("Completa el campo de Apellido Materno");
+                    fechanacimiento.setError("Completa el campo de Fecha de Nacimiento");
+                    altura.setError("Completa el campo de Altura");
+                    peso.setError("Completa el campo de Peso");
+                    talla.setError("Completa el campo de Talla");
+                    sexo.setError("Completa el campo de Sexo");
+                    fecharegistro.setError("Completa el campo de Fecha de Registro");
+                    fechaInicioR.setError("Completa el campo de Fecha de Registro");
+                    fechaFinR.setError("Completa el campo de Fecha de Registro");
+                    estadoG.setError("Completa el campo de Fecha de Registro");
                     return;
+                }else if (NombreRA.isEmpty()){
+                    nombre.setError("Complete el campo de Nombre");
                 }else if (ApellidoPRA.isEmpty()){
                     apellidop.setError("Completa el campo de Apellido Paterno");
                 }else if (ApellidoMRA.isEmpty()){
@@ -336,18 +322,12 @@ public class registroAsesorado extends Fragment {
                     fechaFinR.setError("Completa el campo de Fecha de Registro");
                 }else if (EstadoAsesorado.isEmpty()){
                     estadoG.setError("Completa el campo de Fecha de Registro");
-                }else if (IdEntrenador.isEmpty()&& idlist.isEmpty()){
-                    //  SpinerEntreador.getSelectedView().setEr
-                    SpinerEntreador.getAdapter().isEmpty();
-                    idlist.isEmpty();
-                    //idlist.get(SpinerEntreador.getTextAlignment());
                 }
                 else if (IdRutina.isEmpty()&& idRlist.isEmpty()){
-                    SpinerEntreador.getAdapter().isEmpty();
                     idRlist.isEmpty();
                 }else {
                     progressDialog.show();
-                    String url="http://192.168.1.65/Alumno/insertAsesorado.php?nombre="+NombreRA+
+                    String url="https://gdxblackstar.000webhostapp.com/insertAsesorado.php?nombre="+NombreRA+
                             "&apellidop="+ApellidoPRA+
                             "&apellidom="+ApellidoMRA+
                             "&fechanacimiento="+fechaNacimientoRA+
@@ -357,7 +337,7 @@ public class registroAsesorado extends Fragment {
                             "&sexo="+Sexo+
                             "&fecharegistro="+FechaRegistro+
                             "&estado="+EstadoAsesorado+
-                            "&identrenador="+IdEntrenador+
+                            "&identrenador="+IDEntrenadorRA+
                             "&idrutina="+IdRutina+
                             "&fechainicio="+FechaInicioR+
                             "&fechafinalizacion="+FechaFinR;
@@ -366,6 +346,7 @@ public class registroAsesorado extends Fragment {
                             Request.Method.GET, url , null, new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {
+                            new SweetAlertDialog(getActivity(), SweetAlertDialog.SUCCESS_TYPE).setTitleText("Asesorado registrado con éxito").show();
                             nombre.setText("");
                             apellidop.setText("");
                             apellidom.setText("");
@@ -378,7 +359,6 @@ public class registroAsesorado extends Fragment {
                             fechaInicioR.setText("");
                             fechaFinR.setText("");
                             estadoG.setText("");
-                            Toast.makeText(view.getContext(), response.toString(), Toast.LENGTH_LONG).show();
                             progressDialog.dismiss();
 
                         }

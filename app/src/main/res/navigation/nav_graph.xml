@@ -18,6 +18,9 @@
         <action
             android:id="@+id/action_inicio_to_recuperarContrasenia"
             app:destination="@id/recuperarContrasenia" />
+        <action
+            android:id="@+id/action_inicio_self"
+            app:destination="@id/inicio" />
     </fragment>
     <fragment
         android:id="@+id/inMenu"

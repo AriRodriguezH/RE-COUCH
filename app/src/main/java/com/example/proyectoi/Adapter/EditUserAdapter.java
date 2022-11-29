@@ -38,7 +38,7 @@ public class EditUserAdapter extends RecyclerView.Adapter<EditUserAdapter.EditUs
         holder.txttalla.setText(listaEditarUsuarios.get(position).getTalla().toString());
         holder.txtsexo.setText(listaEditarUsuarios.get(position).getSexo().toString());
         holder.txtfechasNacimiento.setText(listaEditarUsuarios.get(position).getFechanacimiento().toString());
-       // holder.MIDasesad.setId(listaEditarUsuarios.get(position).getIdasesorado());
+        holder.MIDasesad.setId(listaEditarUsuarios.get(position).getIdasesorado());
         holder.btninfo.setId(listaEditarUsuarios.get(position).getIdasesorado());
         holder.txtEstado.setText(listaEditarUsuarios.get(position).getEstado().toString());
         holder.txtEntrenador.setText(listaEditarUsuarios.get(position).getNombreEntrenador().toString());

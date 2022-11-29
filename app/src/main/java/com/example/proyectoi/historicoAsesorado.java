@@ -31,11 +31,15 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
+
 public class historicoAsesorado extends Fragment {
     Spinner spinnerCountry;
     ArrayList<String> countryList = new ArrayList<>();
     ArrayList<String> idlist = new ArrayList<>();
     ArrayAdapter<String> countryAdapter;
+    EditText IDUser;
+    private PreferenceHelper preferenceHelper;
     RequestQueue requestQueue2;
 
     @Override
@@ -47,7 +51,8 @@ public class historicoAsesorado extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_historico_asesorado, container, false);
+        View vista= inflater.inflate(R.layout.fragment_historico_asesorado, container, false);
+        return vista;
     }
 
     @Override
@@ -58,10 +63,15 @@ public class historicoAsesorado extends Fragment {
         EditText Peso = view.findViewById(R.id.etPesoHA);
         EditText Altura = view.findViewById(R.id.etAlturaHA);
         EditText Talla = view.findViewById(R.id.etTallaHA);
+        IDUser = view.findViewById(R.id.identrenadorHA);
+        preferenceHelper = new PreferenceHelper(getContext());
+        IDUser.setText(preferenceHelper.getHobby());
         requestQueue2 = Volley.newRequestQueue(getContext());
         spinnerCountry = view.findViewById(R.id.spinnerCountry);
 
-        String url2 = "http://192.168.1.12/Alumno/spinerAsesorado.php";
+        String IDEntrenador = IDUser.getText().toString();
+
+        String url2 = "https://gdxblackstar.000webhostapp.com/spinerAsesorado.php?identrenador="+IDEntrenador;
         JsonObjectRequest jsonObjectRequest2 = new JsonObjectRequest(Request.Method.POST,
                 url2, null, new Response.Listener<JSONObject>() {
             @Override
@@ -120,9 +130,13 @@ public class historicoAsesorado extends Fragment {
                 final ProgressDialog progressDialog = new ProgressDialog(getActivity());
                 progressDialog.setMessage("Cargando");
 
-                if (AlturaHA.isEmpty()) {
+                if (AlturaHA.isEmpty()&&PesoHA.isEmpty()&&TallaHA.isEmpty()) {
                     Altura.setError("Completa el campo de Altura");
-                } else if (PesoHA.isEmpty()) {
+                    Peso.setError("Completa el campo de Peso");
+                    Talla.setError("Completa el campo de Talla");
+                } else if (AlturaHA.isEmpty()) {
+                    Altura.setError("Completa el campo de Altura");
+                }else if (PesoHA.isEmpty()) {
                     Peso.setError("Completa el campo de Peso");
                 } else if (TallaHA.isEmpty()) {
                     Talla.setError("Completa el campo de Talla");
@@ -130,7 +144,7 @@ public class historicoAsesorado extends Fragment {
                     spinnerCountry.getAdapter().isEmpty();
                 } else {
                     progressDialog.show();
-                    String url = "http://192.168.1.12/Alumno/insertHistoricoasesorado.php?altura=" + AlturaHA +
+                    String url = "https://gdxblackstar.000webhostapp.com/insertHistoricoasesorado.php?altura=" + AlturaHA +
                             "&peso=" + PesoHA +
                             "&talla=" + TallaHA +
                             "&idasesorado=" + IDASESORADO;
@@ -139,7 +153,8 @@ public class historicoAsesorado extends Fragment {
                             Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {
-                            Toast.makeText(view.getContext(), response.toString(), Toast.LENGTH_LONG).show();
+                            new SweetAlertDialog(getActivity(), SweetAlertDialog.SUCCESS_TYPE).setTitleText("Histórico Agregado").show();
+                            //Toast.makeText(view.getContext(), response.toString(), Toast.LENGTH_LONG).show();
                             progressDialog.dismiss();
                         }
                     }, new Response.ErrorListener() {

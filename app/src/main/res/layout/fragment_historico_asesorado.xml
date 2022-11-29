@@ -43,6 +43,15 @@
         android:elevation="15dp"
         app:srcCompat="@drawable/ic_backwhite" />
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="id"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:id="@+id/identrenadorHA"
+        />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:id="@+id/lol"
@@ -197,7 +206,7 @@
             android:layout_marginBottom="10dp"
             android:elevation="10dp"
             android:background="@drawable/bg_inicios"
-            android:text="Agregar nuevo histórico"
+            android:text="Agregar Nuevo Histórico"
             android:textAllCaps="false"
             android:textColor="@color/white" />
     </LinearLayout>

@@ -26,7 +26,7 @@
             android:layout_marginTop="5dp"
             android:textAlignment="center"
             android:textSize="25dp"
-            android:text="">
+            android:text="2">
 
         </TextView>
 
@@ -175,7 +175,7 @@
                         android:fontFamily="@font/viga"
                         android:gravity="center"
                         android:textSize="15dp"
-                        android:text="Historico Asesorado"
+                        android:text="Histórico Asesorados"
                         android:textColor="#990F12" />
 
 

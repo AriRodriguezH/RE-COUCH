@@ -32,6 +32,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
+
 
 public class editusuario extends Fragment {
     private PreferenceHelper preferenceHelper;
@@ -75,6 +77,13 @@ public class editusuario extends Fragment {
 
         preferenceHelper = new PreferenceHelper(getContext());
         idUsers.setText(preferenceHelper.getHobby());
+        nombre.setText(preferenceHelper.getName());
+        apellidop.setText(preferenceHelper.getAPP());
+        apellidom.setText(preferenceHelper.getAPM());
+        fechanacimiento.setText(preferenceHelper.getFECHANA());
+        notelefono.setText(preferenceHelper.getTELEFONO());
+        sexo.setText(preferenceHelper.getSEXO());
+        correo.setText(preferenceHelper.getCORREO());
 
 
         /*Inicio Metodo de Fechas visualización*/
@@ -157,7 +166,35 @@ public class editusuario extends Fragment {
                 if (!validateEmail() | !validatePassword()) {
                     return;
                 }else {
-                    ActualizarUsuario();
+                    new SweetAlertDialog( getActivity(), SweetAlertDialog.WARNING_TYPE).setTitleText("¿Deseas guardar los cambios?")
+                            .setContentText("Te aconsejamos anotar el correo y contraseña en caso de cambios realizados en ellos")
+                            .setCancelText("No, cancelar acción")
+                            .setConfirmText("Si, editar perfil")
+                            .showCancelButton(true)
+                            .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                @Override
+                                public void onClick(SweetAlertDialog sweetAlertDialog) {
+                                    sweetAlertDialog.setTitleText("Acción cancelada")
+                                            .setContentText("Información no actualizada")
+                                            .setConfirmText("Okey")
+                                            .showCancelButton(false)
+                                            .setCancelClickListener(null)
+                                            .setConfirmClickListener(null)
+                                            .changeAlertType(SweetAlertDialog.ERROR_TYPE);
+                                }
+                            }).setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                @Override
+                                public void onClick(SweetAlertDialog sweetAlertDialog) {
+                                    sweetAlertDialog.setTitleText("Actualización Confirmada")
+                                            .setContentText("Tus datos se actualizaron con éxito")
+                                            .setConfirmText("Okey")
+                                            .showCancelButton(false)
+                                            .setCancelClickListener(null)
+                                            .setConfirmClickListener(null)
+                                            .changeAlertType(SweetAlertDialog.SUCCESS_TYPE);
+                                    ActualizarUsuario();
+                                }
+                            }).show();
                 }
             }
 
@@ -239,7 +276,7 @@ public class editusuario extends Fragment {
                     fechaactualizacion.setError("Completa el campo de Fecha de Actualización");
                 }else {
                     progressDialog.show();
-                    String url="http://192.168.1.65/Alumno/updateEntrenador.php";
+                    String url="https://gdxblackstar.000webhostapp.com/updateEntrenador.php";
 
                     StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                         @Override

@@ -2,6 +2,7 @@ package com.example.proyectoi.entidades;
 
 public class Usuario {
     private int idasesorado;
+    private int identrenador;
     private String nombre;
     private String apellidop;
     private String apellidom;
@@ -15,7 +16,13 @@ public class Usuario {
     private String nombreEntrenador;
     private String nombreRutina;
 
+    public Integer getIdEntrenador() {
+        return identrenador;
+    }
 
+    public void setIdEntrenador(Integer idEntrenador) {
+        this.identrenador = idEntrenador;
+    }
 
     public Integer getIdasesorado() {
         return idasesorado;

@@ -33,9 +33,9 @@ import java.util.Map;
 
 
 public class Inicio extends Fragment {
-    private final String KEY_SUCCESS = "status";
+    public String KEY_SUCCESS = "status";
     EditText correo, contrasenia;
-    private PreferenceHelper preferenceHelper;
+    PreferenceHelper preferenceHelper;
     String Correo,Contrasenia;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -66,6 +66,8 @@ public class Inicio extends Fragment {
 
 
         reloadPreferencias();
+
+
         IniciarSesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,7 +79,7 @@ public class Inicio extends Fragment {
                 Correo = correo.getText().toString().trim();
                 Contrasenia = contrasenia.getText().toString().trim();
 
-                String url = "http://192.168.1.12/Alumno/simplelogin.php";
+                String url = "https://gdxblackstar.000webhostapp.com/simplelogin.php";
 
                 StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                     @Override
@@ -98,17 +100,23 @@ public class Inicio extends Fragment {
                             try {
                                 JSONObject jsonObject = new JSONObject(response);
                                 if (jsonObject.getString(KEY_SUCCESS).equals("true")) {
+                                    guardarPreferencias();
                                     JSONArray dataArray = jsonObject.getJSONArray("data");
                                     for (int i = 0; i < dataArray.length(); i++) {
-                                        guardarDatosInicio();
                                        Toast.makeText(getActivity().getApplicationContext(), "Bienvenido ", Toast.LENGTH_SHORT).show();
                                         Navigation.findNavController(view).navigate(R.id.action_inicio_to_inMenu);
                                         JSONObject dataobj = dataArray.getJSONObject(i);
+                                        preferenceHelper.putHobby(dataobj.getString(AndyConstants.Params.HOBBY));
                                         preferenceHelper.putName(dataobj.getString(AndyConstants.Params.NAME));
-                                       preferenceHelper.putHobby(dataobj.getString(AndyConstants.Params.HOBBY));
+                                        preferenceHelper.putApellidoP(dataobj.getString(AndyConstants.Params.APP));
+                                        preferenceHelper.putApellidoM(dataobj.getString(AndyConstants.Params.APM));
+                                        preferenceHelper.putFechaNa(dataobj.getString(AndyConstants.Params.FECHANA));
+                                        preferenceHelper.putTelefono(dataobj.getString(AndyConstants.Params.TELEFONO));
+                                        preferenceHelper.putSexo(dataobj.getString(AndyConstants.Params.SEXO));
+                                        preferenceHelper.putCorreo(dataobj.getString(AndyConstants.Params.CORREO));
                                     }
                                 } else {
-                                    Toast.makeText(getActivity().getApplicationContext(), "Error" , Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getActivity().getApplicationContext(), "Correo o Contraseña incorrectos, inténtelo de nuevo" , Toast.LENGTH_SHORT).show();
                                 }
 
                             } catch (JSONException e) {
@@ -145,12 +153,12 @@ public class Inicio extends Fragment {
 
     }
 
-    private  void guardarDatosInicio(){
+    private  void guardarPreferencias(){
         SharedPreferences preferences = getActivity().getSharedPreferences("preferenciasInicioS", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
-        editor.putBoolean("sesion", true);
         editor.putString("correo", Correo);
         editor.putString("contrasenia", Contrasenia);
+        editor.putBoolean("sesion", true);
         editor.commit();
     }
 

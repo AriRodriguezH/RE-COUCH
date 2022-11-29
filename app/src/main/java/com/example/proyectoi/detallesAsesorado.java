@@ -38,8 +38,6 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class detallesAsesorado extends Fragment {
 
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +59,6 @@ public class detallesAsesorado extends Fragment {
         TextView textEstado =(TextView) view.findViewById(R.id.selectEstado);
         TextView textEntrenador =(TextView) view.findViewById(R.id.idEntrenadorDA);
         TextView textEdad =(TextView) view.findViewById(R.id.idEdadDA);
-      //  requestQueueRutina = Volley.newRequestQueue(getContext());
         TextView textrutina =(TextView) view.findViewById(R.id.idRutinaDA);
         String getArgument = getArguments().getString("NombreDetalle");
         String getArgumentid = getArguments().getString("numbreid");
@@ -89,7 +86,6 @@ public class detallesAsesorado extends Fragment {
         textEntrenador.setText(getArgumentEntrenador);
         textEdad.setText(getArgumentEdad);
         textrutina.setText(getArgumentRutina);
-        //spinnerRutinaDA.getOnItemSelectedListener();
 
         return view;//return view
 
@@ -260,12 +256,15 @@ public class detallesAsesorado extends Fragment {
                     miid.setError("Completa el campo de Fecha de Actualización");
                 }else {
                     progressDialog.show();
-                    String url="http://192.168.1.65/Alumno/updateAsesorado.php";
+                    String url="https://gdxblackstar.000webhostapp.com/updateAsesorado.php";
+                    String urlLocal="http://192.168.1.65/Alumno/updateasesorado.php";
 
                     StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
-                            Toast.makeText(getActivity(), "Actualización exitosa", Toast.LENGTH_SHORT).show();
+                            new SweetAlertDialog(getActivity(), SweetAlertDialog.SUCCESS_TYPE).setTitleText("Asesorado actualizado con éxito").show();
+                            Navigation.findNavController(view).navigate(R.id.action_consultarAsesorados_self);
+                            //Toast.makeText(getActivity(), "Actualización exitosa", Toast.LENGTH_SHORT).show();
                             progressDialog.dismiss();
                         }
                     }, new Response.ErrorListener() {
@@ -332,12 +331,12 @@ public class detallesAsesorado extends Fragment {
             }
 
             private void EliminarAsesordo() {
-                String ureliminar = "http://192.168.1.65/Alumno/deleteAsesorado.php";
+                String ureliminar = "https://gdxblackstar.000webhostapp.com/deleteAsesorado.php";
                 StringRequest stringRequest2 = new StringRequest(Request.Method.POST, ureliminar, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         Navigation.findNavController(view).navigate(R.id.action_consultarAsesorados_self);
-                        Toast.makeText(getActivity(), "Asesorado Eliminado", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(getActivity(), "Asesorado Eliminado", Toast.LENGTH_SHORT).show();
                     }
                 }, new Response.ErrorListener() {
                     @Override

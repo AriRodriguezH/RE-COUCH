@@ -35,16 +35,18 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:transitionName="tvLogin"
+        android:layout_marginStart="21dp"
         android:layout_marginLeft="39dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="17dp"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
-        android:textColor="#f93421"
-        android:textSize="45sp"
-        android:textStyle="bold"
+        android:text="CONFIGURAR PERFIL"
         android:textAlignment="center"
-        android:text="Editar Usuario"/>
+        android:textColor="#f93421"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:transitionName="tvLogin" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -217,7 +219,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginBottom="10dp"
-                    android:hint="Seleccione su Sexo"
+                    android:hint="Seleccione su sexo"
                     android:textColorHint="@color/black"
                     app:boxStrokeColor="@color/salmon"
                     app:endIconTint="@color/black"
@@ -370,7 +372,7 @@
             android:layout_marginBottom="10dp"
             android:background="@drawable/bg_inicios"
             android:elevation="10dp"
-            android:text="Registrar"
+            android:text="Guardar Cambios"
             android:textAllCaps="false"
             android:textColor="@color/white" />
     </LinearLayout>

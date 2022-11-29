@@ -72,8 +72,9 @@ public class rutinas extends Fragment {
         progress=new ProgressDialog(getContext());
         progress.setMessage("Consultando...");
         progress.show();
+        //
 
-        String url="http://192.168.1.12/Alumno/getRutinas.php";
+        String url="https://gdxblackstar.000webhostapp.com/getRutinas.php";
 
         jsonObjectRequest=new JsonObjectRequest(Request.Method.GET, url, (JSONObject) null, new Response.Listener<JSONObject>() {
             @Override

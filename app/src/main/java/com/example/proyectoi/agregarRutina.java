@@ -203,7 +203,7 @@ public class agregarRutina extends Fragment {
 
         /*Funcion Sipners*/
 
-        String urlMaquina = "http://192.168.1.12/Alumno/spinerMaquina.php";
+        String urlMaquina = "https://gdxblackstar.000webhostapp.com/spinerMaquina.php";
         JsonObjectRequest jsonObjectRequest2 = new JsonObjectRequest(Request.Method.POST,
                 urlMaquina, null, new Response.Listener<JSONObject>() {
             @Override
@@ -354,14 +354,6 @@ public class agregarRutina extends Fragment {
         noRepeticionesV.setAdapter(miserie);
         noRepeticionesS.setAdapter(miserie);
         noRepeticionesD.setAdapter(miserie);
-
-
-
-
-
-
-
-
 
 
         cbLunes.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -642,7 +634,7 @@ public class agregarRutina extends Fragment {
                 }else {
                     if (cbLunes.isChecked()) {
                         progressDialog.show();
-                        String url = "http://192.168.1.12/Alumno/insertRutina.php?nombrerutina=" + miNombreRutina +
+                        String url = "https://gdxblackstar.000webhostapp.com/insertRutina.php?nombrerutina=" + miNombreRutina +
                                 "&nivel=" + Nivel +
                                 "&parteatrabajar=" + parteTrabajarL +
                                 "&diasemana=" + lunes +
@@ -681,14 +673,14 @@ public class agregarRutina extends Fragment {
                     }
                     if (cbMartes.isChecked()) {
                         progressDialog.show();
-                        String url = "http://192.168.1.12/Alumno/insertRutina.php?nombrerutina=" + miNombreRutina +
+                        String url = "https://gdxblackstar.000webhostapp.com/insertRutina.php?nombrerutina=" + miNombreRutina +
                                 "&nivel=" + Nivel +
                                 "&parteatrabajar=" + parteTrabajarM +
                                 "&diasemana=" + martes +
-                                "&nombremaquina=" + maquinaM1 +
-                                "&nombremaquina2=" + maquinaM2 +
-                                "&nombremaquina3=" + maquinaM3 +
-                                "&nombremaquina4=" + maquinaM4 +
+                                "&idmaquina1=" + maquinaM1 +
+                                "&idmaquina2=" + maquinaM2 +
+                                "&idmaquina3=" + maquinaM3 +
+                                "&idmaquina4=" + maquinaM4 +
                                 "&numrepeticion=" + NumRepeticionM +
                                 "&series=" + SeriesM +
                                 "&pesoAgregado1L=" + pesoAgregado1M +
@@ -719,14 +711,14 @@ public class agregarRutina extends Fragment {
                     }
                     if (cbMiercoles.isChecked()) {
                         progressDialog.show();
-                        String url = "http://192.168.1.12/Alumno/insertRutina.php?nombrerutina=" + miNombreRutina +
+                        String url = "https://gdxblackstar.000webhostapp.com/insertRutina.php?nombrerutina=" + miNombreRutina +
                                 "&nivel=" + Nivel +
                                 "&parteatrabajar=" + parteTrabajarMi +
                                 "&diasemana=" + miercoles +
-                                "&nombremaquina=" + maquinaMi1 +
-                                "&nombremaquina2=" + maquinaMi2 +
-                                "&nombremaquina3=" + maquinaMi3 +
-                                "&nombremaquina4=" + maquinaMi4 +
+                                "&idmaquina1=" + maquinaMi1 +
+                                "&idmaquina2=" + maquinaMi2 +
+                                "&idmaquina3=" + maquinaMi3 +
+                                "&idmaquina4=" + maquinaMi4 +
                                 "&numrepeticion=" + NumRepeticionMi +
                                 "&series=" + SeriesMi +
                                 "&pesoAgregado1L=" + pesoAgregado1Mi +
@@ -757,14 +749,14 @@ public class agregarRutina extends Fragment {
                     }
                     if (cbJueves.isChecked()) {
                         progressDialog.show();
-                        String url = "http://192.168.1.12/Alumno/insertRutina.php?nombrerutina=" + miNombreRutina +
+                        String url = "https://gdxblackstar.000webhostapp.com/insertRutina.php?nombrerutina=" + miNombreRutina +
                                 "&nivel=" + Nivel +
                                 "&parteatrabajar=" + parteTrabajarJ +
                                 "&diasemana=" + jueves +
-                                "&nombremaquina=" + maquinaJ1 +
-                                "&nombremaquina2=" + maquinaJ2 +
-                                "&nombremaquina3=" + maquinaJ3 +
-                                "&nombremaquina4=" + maquinaJ4 +
+                                "&idmaquina1=" + maquinaJ1 +
+                                "&idmaquina2=" + maquinaJ2 +
+                                "&idmaquina3=" + maquinaJ3 +
+                                "&idmaquina4=" + maquinaJ4 +
                                 "&numrepeticion=" + NumRepeticionJ +
                                 "&series=" + SeriesJ +
                                 "&pesoAgregado1L=" + pesoAgregado1J +
@@ -795,14 +787,14 @@ public class agregarRutina extends Fragment {
                     }
                     if (cbViernes.isChecked()) {
                         progressDialog.show();
-                        String url = "http://192.168.1.12/Alumno/insertRutina.php?nombrerutina=" + miNombreRutina +
+                        String url = "https://gdxblackstar.000webhostapp.com/insertRutina.php?nombrerutina=" + miNombreRutina +
                                 "&nivel=" + Nivel +
                                 "&parteatrabajar=" + parteTrabajarV +
                                 "&diasemana=" + viernes +
-                                "&nombremaquina=" + maquinaV1 +
-                                "&nombremaquina2=" + maquinaV2 +
-                                "&nombremaquina3=" + maquinaV3 +
-                                "&nombremaquina4=" + maquinaV4 +
+                                "&idmaquina1=" + maquinaV1 +
+                                "&idmaquina2=" + maquinaV2 +
+                                "&idmaquina3=" + maquinaV3 +
+                                "&idmaquina4=" + maquinaV4 +
                                 "&numrepeticion=" + NumRepeticionV +
                                 "&series=" + SeriesV +
                                 "&pesoAgregado1L=" + pesoAgregado1V +
@@ -833,14 +825,14 @@ public class agregarRutina extends Fragment {
                     }
                     if (cbSabado.isChecked()) {
                         progressDialog.show();
-                        String url = "http://192.168.1.12/Alumno/insertRutina.php?nombrerutina=" + miNombreRutina +
+                        String url = "https://gdxblackstar.000webhostapp.com/insertRutina.php?nombrerutina=" + miNombreRutina +
                                 "&nivel=" + Nivel +
                                 "&parteatrabajar=" + parteTrabajarS +
                                 "&diasemana=" + sabado +
-                                "&nombremaquina=" + maquinaS1 +
-                                "&nombremaquina2=" + maquinaS2 +
-                                "&nombremaquina3=" + maquinaS3 +
-                                "&nombremaquina4=" + maquinaS4 +
+                                "&idmaquina1=" + maquinaS1 +
+                                "&idmaquina2=" + maquinaS2 +
+                                "&idmaquina3=" + maquinaS3 +
+                                "&idmaquina4=" + maquinaS4 +
                                 "&numrepeticion=" + NumRepeticionS +
                                 "&series=" + SeriesS +
                                 "&pesoAgregado1L=" + pesoAgregado1S +
@@ -871,14 +863,14 @@ public class agregarRutina extends Fragment {
                     }
                     if (cbDomingo.isChecked()) {
                         progressDialog.show();
-                        String url = "http://192.168.1.12/Alumno/insertRutina.php?nombrerutina=" + miNombreRutina +
+                        String url = "https://gdxblackstar.000webhostapp.com/insertRutina.php?nombrerutina=" + miNombreRutina +
                                 "&nivel=" + Nivel +
                                 "&parteatrabajar=" + parteTrabajarD +
                                 "&diasemana=" + domingo +
-                                "&nombremaquina=" + maquinaD1 +
-                                "&nombremaquina2=" + maquinaD2 +
-                                "&nombremaquina3=" + maquinaD3 +
-                                "&nombremaquina4=" + maquinaD4 +
+                                "&idmaquina1=" + maquinaD1 +
+                                "&idmaquina2=" + maquinaD2 +
+                                "&idmaquina3=" + maquinaD3 +
+                                "&idmaquina4=" + maquinaD4 +
                                 "&numrepeticion=" + NumRepeticionD +
                                 "&series=" + SeriesD +
                                 "&pesoAgregado1L=" + pesoAgregado1D +

@@ -13,8 +13,6 @@
     android:id="@+id/rec"
     android:background="@color/white">
 
-
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,10 +31,11 @@
         android:textStyle="bold"
         android:textAlignment="center"/>
 
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="id"
+        android:visibility="gone"
         android:textColor="@color/black"
         android:id="@+id/identrenadorCA"
        />

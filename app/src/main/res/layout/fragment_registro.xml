@@ -13,19 +13,22 @@
 
     <TextView
         android:id="@+id/txtRegistro"
-        android:layout_width="wrap_content"
+        android:layout_width="297dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginStart="72dp"
         android:layout_marginLeft="100dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="42dp"
         android:layout_marginRight="100dp"
-        android:layout_marginTop="20dp"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
-        android:text="Registro"
+        android:text="CREAR CUENTA"
         android:textAlignment="center"
         android:textColor="#f93421"
-        android:textSize="45sp"
+        android:textSize="39sp"
         android:textStyle="bold" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -307,7 +310,7 @@
             android:layout_marginBottom="10dp"
             android:elevation="10dp"
             android:background="@drawable/bg_inicios"
-            android:text="Registrar"
+            android:text="Crear Cuenta"
             android:textAllCaps="false"
             android:textColor="@color/white" />
     </LinearLayout>

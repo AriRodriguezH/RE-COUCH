@@ -41,6 +41,15 @@
         android:elevation="15dp"
         app:srcCompat="@drawable/ic_backwhite" />
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="id"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:id="@+id/identrenadorRA"
+        />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:id="@+id/lol"
@@ -337,31 +346,7 @@
                         />
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <TextView
-                    android:id="@+id/textViewE"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:textColor="#163e6c"
-                    android:text="Selecciona al entrenador acargo del asesorado:"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    />
-                <Spinner
-                    android:id="@+id/etIdEntrenadorRA"
-                    android:layout_width="match_parent"
-                    android:layout_height="41dp"
-                    android:layout_margin="10dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:backgroundTint="@color/black"
-                    android:ems="10"
-                    app:boxStrokeColor="@color/black"
-                    app:endIconTint="@color/black"
-                    app:startIconDrawable="@drawable/ic_statusgym"
-                    app:startIconTint="@color/black" />
+
                 <TextView
                     android:id="@+id/textView4"
                     android:layout_width="match_parent"

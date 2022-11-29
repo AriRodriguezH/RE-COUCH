@@ -155,7 +155,7 @@
                             android:paddingLeft="5dp"
                             android:paddingRight="5dp"
 
-                            android:text="Selecciona los dias a trabajar" />
+                            android:text="Selecciona los días a trabajar" />
 
                     </FrameLayout>
                 </LinearLayout>
@@ -884,7 +884,7 @@
                     android:checked="false"
                     android:buttonTint="#991918"
                     android:textSize="14sp"
-                    android:text="Miercoles"
+                    android:text="Miércoles"
                     android:textColor="@color/black"/>
 
                 <ScrollView
@@ -1955,7 +1955,7 @@
                     android:checked="false"
                     android:buttonTint="#991918"
                     android:textSize="14sp"
-                    android:text="Sabado"
+                    android:text="Sábado"
                     android:textColor="@color/black"/>
 
                 <ScrollView
@@ -2678,7 +2678,7 @@
             android:layout_marginBottom="10dp"
             android:elevation="10dp"
             android:background="@drawable/bg_inicios"
-            android:text="Registrar Rutina"
+            android:text="Agregar Rutina"
             android:textAllCaps="false"
             android:textColor="@color/white" />
     </LinearLayout>

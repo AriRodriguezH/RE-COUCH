@@ -294,6 +294,7 @@
             android:text="EntrenadorAsesorado"
             android:textColor="@color/black"
             android:enabled="false"
+            android:visibility="gone"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:layout_marginBottom="16dp"/>
 
@@ -366,6 +367,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/idEstadoDA"
             android:text="Entranador Acargo:"
+            android:visibility="gone"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="@android:color/black" />
 

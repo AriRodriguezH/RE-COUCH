@@ -69,7 +69,6 @@ public class Registro extends Fragment {
         FloatingActionButton VolverPrincipal = view.findViewById(R.id.btnRegresarRegistro);
 
 
-
         /*Inicio Metodo de Fechas visualización*/
 
         fechanacimiento.setOnClickListener(new View.OnClickListener() {
@@ -212,7 +211,7 @@ public class Registro extends Fragment {
                     contrasenia.setError("Completa el campo de Contraseña");
                 }else {
                     progressDialog.show();
-                    String url="http://192.168.1.12/Alumno/insertEntrenador.php?nombre="+Nombre+
+                    String url="https://gdxblackstar.000webhostapp.com/insertEntrenador.php?nombre="+Nombre+
                             "&apellidop="+ApellidoP+
                             "&apellidom="+ApellidoM+
                             "&fechanacimiento="+fechaNacimiento+
