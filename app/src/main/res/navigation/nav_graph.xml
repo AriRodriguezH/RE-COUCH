@@ -16,9 +16,6 @@
             android:id="@+id/action_inicio_to_registro"
             app:destination="@id/registro" />
         <action
-            android:id="@+id/action_inicio_to_recuperarContrasenia"
-            app:destination="@id/recuperarContrasenia" />
-        <action
             android:id="@+id/action_inicio_self"
             app:destination="@id/inicio" />
     </fragment>
@@ -142,15 +139,6 @@
         <action
             android:id="@+id/action_agregarRutina_to_rutinas"
             app:destination="@id/rutinas" />
-    </fragment>
-    <fragment
-        android:id="@+id/recuperarContrasenia"
-        android:name="com.example.proyectoi.recuperarContrasenia"
-        android:label="fragment_recuperar_contrasenia"
-        tools:layout="@layout/fragment_recuperar_contrasenia" >
-        <action
-            android:id="@+id/action_recuperarContrasenia_to_inicio"
-            app:destination="@id/inicio" />
     </fragment>
     <fragment
         android:id="@+id/detallesAsesorado"
