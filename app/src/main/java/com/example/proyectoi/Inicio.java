@@ -77,8 +77,9 @@ public class Inicio extends Fragment {
                 Contrasenia = contrasenia.getText().toString().trim();
 
                 String url = "https://gdxblackstar.000webhostapp.com/simplelogin.php";
+                String urllocal = "http://192.168.1.65/Alumno/simplelogin.php";
 
-                StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+                StringRequest request = new StringRequest(Request.Method.POST, urllocal, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         if (Correo.isEmpty() && Contrasenia.isEmpty()) {

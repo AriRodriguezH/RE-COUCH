@@ -380,7 +380,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     app:helperTextTextColor="@color/black"
-                    android:hint="Fecha del Inicio de la rutina"
+                    android:hint="Fecha del Inicio de la Rutina"
                     android:textColorHint="@color/black"
                     app:boxStrokeColor="@color/black"
                     app:endIconTint="@color/black"
@@ -406,7 +406,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     app:helperTextTextColor="@color/black"
-                    android:hint="Fecha del Fin de la rutina"
+                    android:hint="Fecha del Fin de la Rutina"
                     android:textColorHint="@color/black"
                     app:boxStrokeColor="@color/black"
                     app:endIconTint="@color/black"
@@ -453,44 +453,4 @@
             android:textColor="@color/white" />
     </LinearLayout>
 
-<!--
-                    <EditText
-                        android:id="@+id/etIdEntrenadorRA"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/black"
-                        android:hint="Seleccione su id de coach"
-                        android:textColorHint="#706B6B"
-                        android:digits="123456789"
-                        android:inputType="number"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"/>
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/cv"
-                android:layout_alignLeft="@+id/cv"
-                android:layout_alignRight="@+id/cv"
-                android:layout_marginLeft="35dp"
-                android:layout_marginTop="-50dp"
-                android:layout_marginRight="35dp"
-                android:elevation="10dp">
-
-                <Button
-                    android:id="@+id/btnRegistroAsesorado"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_inicios"
-                    android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:text="Registrar Asesorado"
-                    android:textAllCaps="false" />
-            </RelativeLayout>
-
-        </RelativeLayout>
-    </ScrollView>-->
 </RelativeLayout>

@@ -211,6 +211,7 @@ public class Registro extends Fragment {
                     contrasenia.setError("Completa el campo de Contraseña");
                 }else {
                     progressDialog.show();
+
                     String url="https://gdxblackstar.000webhostapp.com/insertEntrenador.php?nombre="+Nombre+
                             "&apellidop="+ApellidoP+
                             "&apellidom="+ApellidoM+
@@ -220,8 +221,17 @@ public class Registro extends Fragment {
                             "&correo="+email+
                             "&contrasenia="+ Contrasenia;
 
+                    String urllocal="http://192.168.1.65/Alumno/insertEntrenador.php?nombre="+Nombre+
+                            "&apellidop="+ApellidoP+
+                            "&apellidom="+ApellidoM+
+                            "&fechanacimiento="+fechaNacimiento+
+                            "&notelefono="+NumeroTelefono+
+                            "&sexo="+Sexo+
+                            "&correo="+email+
+                            "&contrasenia="+ Contrasenia;
+
                     JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
-                            Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+                            Request.Method.GET, urllocal, null, new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {
                             new SweetAlertDialog(getActivity(), SweetAlertDialog.SUCCESS_TYPE).setTitleText("Usuario Registrado").show();

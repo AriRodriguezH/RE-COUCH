@@ -11,8 +11,8 @@
         android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:textStyle="bold"
-        android:layout_marginStart="115dp"
-        android:text="HOME"
+        android:layout_marginStart="112dp"
+        android:text="INICIO"
         android:textAlignment="center"
         android:textColor="#FFFF"
         android:textSize="30sp" />/>

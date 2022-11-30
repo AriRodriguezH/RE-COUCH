@@ -98,8 +98,9 @@ public class consultarAsesorados extends Fragment {
         Log.i("IDUSER", IDENTRENADOR);
 
         String url="https://gdxblackstar.000webhostapp.com/getAsesorado.php?identrenador="+IDENTRENADOR;
+        String urllocal="http://192.168.1.65/Alumno/getAsesorado.php?identrenador="+IDENTRENADOR;
         Log.e("URL", url);
-        jsonObjectRequest=new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+        jsonObjectRequest=new JsonObjectRequest(Request.Method.GET, urllocal, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
 

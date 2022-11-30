@@ -75,8 +75,9 @@ public class rutinas extends Fragment {
         //
 
         String url="https://gdxblackstar.000webhostapp.com/getRutinas.php";
+        String urllocal="http://192.168.1.65/Alumno/getRutinas.php";
 
-        jsonObjectRequest=new JsonObjectRequest(Request.Method.GET, url, (JSONObject) null, new Response.Listener<JSONObject>() {
+        jsonObjectRequest=new JsonObjectRequest(Request.Method.GET, urllocal, (JSONObject) null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 ConsultarRutinas consultarRutinas=null;

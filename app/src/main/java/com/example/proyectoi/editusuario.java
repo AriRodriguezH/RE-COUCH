@@ -277,8 +277,9 @@ public class editusuario extends Fragment {
                 }else {
                     progressDialog.show();
                     String url="https://gdxblackstar.000webhostapp.com/updateEntrenador.php";
+                    String urllocal="http://192.168.1.65/Alumno/updateEntrenador.php";
 
-                    StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+                    StringRequest stringRequest = new StringRequest(Request.Method.POST, urllocal, new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
                             Toast.makeText(getActivity(), "Actualización exitosa", Toast.LENGTH_SHORT).show();

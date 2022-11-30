@@ -204,8 +204,9 @@ public class agregarRutina extends Fragment {
         /*Funcion Sipners*/
 
         String urlMaquina = "https://gdxblackstar.000webhostapp.com/spinerMaquina.php";
+        String urlMaquinaLocal ="http://192.168.1.65/Alumno/spinerMaquina.php";
         JsonObjectRequest jsonObjectRequest2 = new JsonObjectRequest(Request.Method.POST,
-                urlMaquina, null, new Response.Listener<JSONObject>() {
+                urlMaquinaLocal, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 try {
@@ -653,8 +654,27 @@ public class agregarRutina extends Fragment {
                                 "&nombreejercicio3=" + NombreEjercio3L+
                                 "&nombreejercicio4=" + NombreEjercio4L;
 
+                        String urlocal = "http://192.168.1.65/Alumno/insertRutina.php?nombrerutina=" + miNombreRutina +
+                                "&nivel=" + Nivel +
+                                "&parteatrabajar=" + parteTrabajarL +
+                                "&diasemana=" + lunes +
+                                "&idmaquina1=" + maquinaL1 +
+                                "&idmaquina2=" + maquinaL2 +
+                                "&idmaquina3=" + maquinaL3 +
+                                "&idmaquina4=" + maquinaL4 +
+                                "&numrepeticion=" + NumRepeticionL +
+                                "&series=" + SeriesL +
+                                "&pesoAgregado1L=" + pesoAgregado1L +
+                                "&pesoAgregado2L=" + pesoAgregado2L +
+                                "&pesoAgregado3L=" + pesoAgregado3L +
+                                "&pesoAgregado4L=" + pesoAgregado4L +
+                                "&nombreejercicio1=" + NombreEjercio1L+
+                                "&nombreejercicio2=" + NombreEjercio2L +
+                                "&nombreejercicio3=" + NombreEjercio3L+
+                                "&nombreejercicio4=" + NombreEjercio4L;
+
                         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
-                                Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+                                Request.Method.GET, urlocal, null, new Response.Listener<JSONObject>() {
                             @Override
                             public void onResponse(JSONObject response) {
                                 Toast.makeText(view.getContext(), response.toString(), Toast.LENGTH_LONG).show();
@@ -691,8 +711,27 @@ public class agregarRutina extends Fragment {
                                 "&nombreejercicio2=" + NombreEjercio2M +
                                 "&nombreejercicio3=" + NombreEjercio3M+
                                 "&nombreejercicio4=" + NombreEjercio4M;
+
+                        String urllocal = "http://192.168.1.65/Alumno/insertRutina.php?nombrerutina=" + miNombreRutina +
+                                "&nivel=" + Nivel +
+                                "&parteatrabajar=" + parteTrabajarM +
+                                "&diasemana=" + martes +
+                                "&idmaquina1=" + maquinaM1 +
+                                "&idmaquina2=" + maquinaM2 +
+                                "&idmaquina3=" + maquinaM3 +
+                                "&idmaquina4=" + maquinaM4 +
+                                "&numrepeticion=" + NumRepeticionM +
+                                "&series=" + SeriesM +
+                                "&pesoAgregado1L=" + pesoAgregado1M +
+                                "&pesoAgregado2L=" + pesoAgregado2M+
+                                "&pesoAgregado3L=" + pesoAgregado3M +
+                                "&pesoAgregado4L=" + pesoAgregado4M +
+                                "&nombreejercicio1=" + NombreEjercio1M+
+                                "&nombreejercicio2=" + NombreEjercio2M +
+                                "&nombreejercicio3=" + NombreEjercio3M+
+                                "&nombreejercicio4=" + NombreEjercio4M;
                         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
-                                Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+                                Request.Method.GET, urllocal, null, new Response.Listener<JSONObject>() {
                             @Override
                             public void onResponse(JSONObject response) {
                                 Toast.makeText(view.getContext(), response.toString(), Toast.LENGTH_LONG).show();
@@ -729,8 +768,27 @@ public class agregarRutina extends Fragment {
                                 "&nombreejercicio2=" + NombreEjercio2Mi +
                                 "&nombreejercicio3=" + NombreEjercio3Mi+
                                 "&nombreejercicio4=" + NombreEjercio4Mi;
+
+                        String urlocal = "http://192.168.1.65/Alumno/insertRutina.php?nombrerutina=" + miNombreRutina +
+                                "&nivel=" + Nivel +
+                                "&parteatrabajar=" + parteTrabajarMi +
+                                "&diasemana=" + miercoles +
+                                "&idmaquina1=" + maquinaMi1 +
+                                "&idmaquina2=" + maquinaMi2 +
+                                "&idmaquina3=" + maquinaMi3 +
+                                "&idmaquina4=" + maquinaMi4 +
+                                "&numrepeticion=" + NumRepeticionMi +
+                                "&series=" + SeriesMi +
+                                "&pesoAgregado1L=" + pesoAgregado1Mi +
+                                "&pesoAgregado2L=" + pesoAgregado2Mi +
+                                "&pesoAgregado3L=" + pesoAgregado3Mi +
+                                "&pesoAgregado4L=" + pesoAgregado4Mi +
+                                "&nombreejercicio1=" + NombreEjercio1Mi+
+                                "&nombreejercicio2=" + NombreEjercio2Mi +
+                                "&nombreejercicio3=" + NombreEjercio3Mi+
+                                "&nombreejercicio4=" + NombreEjercio4Mi;
                         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
-                                Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+                                Request.Method.GET, urlocal, null, new Response.Listener<JSONObject>() {
                             @Override
                             public void onResponse(JSONObject response) {
                                 Toast.makeText(view.getContext(), response.toString(), Toast.LENGTH_LONG).show();
@@ -767,8 +825,27 @@ public class agregarRutina extends Fragment {
                                 "&nombreejercicio2=" + NombreEjercio2J +
                                 "&nombreejercicio3=" + NombreEjercio3J+
                                 "&nombreejercicio4=" + NombreEjercio4J;
+
+                        String urlocal = "http://192.168.1.65/Alumno/insertRutina.php?nombrerutina=" + miNombreRutina +
+                                "&nivel=" + Nivel +
+                                "&parteatrabajar=" + parteTrabajarJ +
+                                "&diasemana=" + jueves +
+                                "&idmaquina1=" + maquinaJ1 +
+                                "&idmaquina2=" + maquinaJ2 +
+                                "&idmaquina3=" + maquinaJ3 +
+                                "&idmaquina4=" + maquinaJ4 +
+                                "&numrepeticion=" + NumRepeticionJ +
+                                "&series=" + SeriesJ +
+                                "&pesoAgregado1L=" + pesoAgregado1J +
+                                "&pesoAgregado2L=" + pesoAgregado2J +
+                                "&pesoAgregado3L=" + pesoAgregado3J +
+                                "&pesoAgregado4L=" + pesoAgregado4J +
+                                "&nombreejercicio1=" + NombreEjercio1J+
+                                "&nombreejercicio2=" + NombreEjercio2J +
+                                "&nombreejercicio3=" + NombreEjercio3J+
+                                "&nombreejercicio4=" + NombreEjercio4J;
                         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
-                                Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+                                Request.Method.GET, urlocal, null, new Response.Listener<JSONObject>() {
                             @Override
                             public void onResponse(JSONObject response) {
                                 Toast.makeText(view.getContext(), response.toString(), Toast.LENGTH_LONG).show();
@@ -805,8 +882,27 @@ public class agregarRutina extends Fragment {
                                 "&nombreejercicio2=" + NombreEjercio2V +
                                 "&nombreejercicio3=" + NombreEjercio3V+
                                 "&nombreejercicio4=" + NombreEjercio4V;
+
+                        String urllocal = "http://192.168.1.65/Alumno/insertRutina.php?nombrerutina=" + miNombreRutina +
+                                "&nivel=" + Nivel +
+                                "&parteatrabajar=" + parteTrabajarV +
+                                "&diasemana=" + viernes +
+                                "&idmaquina1=" + maquinaV1 +
+                                "&idmaquina2=" + maquinaV2 +
+                                "&idmaquina3=" + maquinaV3 +
+                                "&idmaquina4=" + maquinaV4 +
+                                "&numrepeticion=" + NumRepeticionV +
+                                "&series=" + SeriesV +
+                                "&pesoAgregado1L=" + pesoAgregado1V +
+                                "&pesoAgregado2L=" + pesoAgregado2V +
+                                "&pesoAgregado3L=" + pesoAgregado3V +
+                                "&pesoAgregado4L=" + pesoAgregado4V +
+                                "&nombreejercicio1=" + NombreEjercio1V+
+                                "&nombreejercicio2=" + NombreEjercio2V +
+                                "&nombreejercicio3=" + NombreEjercio3V+
+                                "&nombreejercicio4=" + NombreEjercio4V;
                         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
-                                Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+                                Request.Method.GET, urllocal, null, new Response.Listener<JSONObject>() {
                             @Override
                             public void onResponse(JSONObject response) {
                                 Toast.makeText(view.getContext(), response.toString(), Toast.LENGTH_LONG).show();
@@ -843,8 +939,27 @@ public class agregarRutina extends Fragment {
                                 "&nombreejercicio2=" + NombreEjercio2S +
                                 "&nombreejercicio3=" + NombreEjercio3S+
                                 "&nombreejercicio4=" + NombreEjercio4S;
+
+                        String urlocal = "http://192.168.1.65/Alumno/insertRutina.php?nombrerutina=" + miNombreRutina +
+                                "&nivel=" + Nivel +
+                                "&parteatrabajar=" + parteTrabajarS +
+                                "&diasemana=" + sabado +
+                                "&idmaquina1=" + maquinaS1 +
+                                "&idmaquina2=" + maquinaS2 +
+                                "&idmaquina3=" + maquinaS3 +
+                                "&idmaquina4=" + maquinaS4 +
+                                "&numrepeticion=" + NumRepeticionS +
+                                "&series=" + SeriesS +
+                                "&pesoAgregado1L=" + pesoAgregado1S +
+                                "&pesoAgregado2L=" + pesoAgregado2S +
+                                "&pesoAgregado3L=" + pesoAgregado3S +
+                                "&pesoAgregado4L=" + pesoAgregado4S +
+                                "&nombreejercicio1=" + NombreEjercio1S+
+                                "&nombreejercicio2=" + NombreEjercio2S +
+                                "&nombreejercicio3=" + NombreEjercio3S+
+                                "&nombreejercicio4=" + NombreEjercio4S;
                         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
-                                Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+                                Request.Method.GET, urlocal, null, new Response.Listener<JSONObject>() {
                             @Override
                             public void onResponse(JSONObject response) {
                                 Toast.makeText(view.getContext(), response.toString(), Toast.LENGTH_LONG).show();
@@ -881,8 +996,27 @@ public class agregarRutina extends Fragment {
                                 "&nombreejercicio2=" + NombreEjercio2D
                                 +"&nombreejercicio3=" + NombreEjercio3D+
                                 "&nombreejercicio4=" + NombreEjercio4D;
+
+                        String urlocal = "http://192.168.1.65/Alumno/insertRutina.php?nombrerutina=" + miNombreRutina +
+                                "&nivel=" + Nivel +
+                                "&parteatrabajar=" + parteTrabajarD +
+                                "&diasemana=" + domingo +
+                                "&idmaquina1=" + maquinaD1 +
+                                "&idmaquina2=" + maquinaD2 +
+                                "&idmaquina3=" + maquinaD3 +
+                                "&idmaquina4=" + maquinaD4 +
+                                "&numrepeticion=" + NumRepeticionD +
+                                "&series=" + SeriesD +
+                                "&pesoAgregado1L=" + pesoAgregado1D +
+                                "&pesoAgregado2L=" + pesoAgregado2D +
+                                "&pesoAgregado3L=" + pesoAgregado3D +
+                                "&pesoAgregado4L=" + pesoAgregado4D +
+                                "&nombreejercicio1=" + NombreEjercio1D+
+                                "&nombreejercicio2=" + NombreEjercio2D
+                                +"&nombreejercicio3=" + NombreEjercio3D+
+                                "&nombreejercicio4=" + NombreEjercio4D;
                         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
-                                Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+                                Request.Method.GET, urlocal, null, new Response.Listener<JSONObject>() {
                             @Override
                             public void onResponse(JSONObject response) {
                                 Toast.makeText(view.getContext(), response.toString(), Toast.LENGTH_LONG).show();

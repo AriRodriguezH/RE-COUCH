@@ -259,7 +259,7 @@ public class detallesAsesorado extends Fragment {
                     String url="https://gdxblackstar.000webhostapp.com/updateAsesorado.php";
                     String urlLocal="http://192.168.1.65/Alumno/updateasesorado.php";
 
-                    StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+                    StringRequest stringRequest = new StringRequest(Request.Method.POST, urlLocal, new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
                             new SweetAlertDialog(getActivity(), SweetAlertDialog.SUCCESS_TYPE).setTitleText("Asesorado actualizado con éxito").show();
@@ -332,7 +332,8 @@ public class detallesAsesorado extends Fragment {
 
             private void EliminarAsesordo() {
                 String ureliminar = "https://gdxblackstar.000webhostapp.com/deleteAsesorado.php";
-                StringRequest stringRequest2 = new StringRequest(Request.Method.POST, ureliminar, new Response.Listener<String>() {
+                String urleliminarLocal="http://192.168.1.65/Alumno/deleteAsesorado.php";
+                StringRequest stringRequest2 = new StringRequest(Request.Method.POST, urleliminarLocal, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         Navigation.findNavController(view).navigate(R.id.action_consultarAsesorados_self);
@@ -355,10 +356,7 @@ public class detallesAsesorado extends Fragment {
             }
         });
 
-
-       // FloatingActionButton btnVolverIdd = view.findViewById(R.id.fabi);
         FloatingActionButton btnVolverIcnio = view.findViewById(R.id.btnRegresarDA);
-        //
 
         btnVolverIcnio.setOnClickListener(new View.OnClickListener() {
             @Override

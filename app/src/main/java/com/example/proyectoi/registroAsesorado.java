@@ -86,8 +86,9 @@ public class registroAsesorado extends Fragment {
 
         /*SPINER FUNCIÓN*/
         String url2 = "https://gdxblackstar.000webhostapp.com/spinerRutina.php";
+        String urllocal2="http://192.168.1.65/Alumno/spinerRutina.php";
         JsonObjectRequest jsonObjectRequest2 = new JsonObjectRequest(Request.Method.POST,
-                url2, null, new Response.Listener<JSONObject>() {
+                urllocal2, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 try {
@@ -342,8 +343,23 @@ public class registroAsesorado extends Fragment {
                             "&fechainicio="+FechaInicioR+
                             "&fechafinalizacion="+FechaFinR;
 
+                    String urlLocal="http://192.168.1.65/Alumno/insertAsesorado.php?nombre="+NombreRA+
+                            "&apellidop="+ApellidoPRA+
+                            "&apellidom="+ApellidoMRA+
+                            "&fechanacimiento="+fechaNacimientoRA+
+                            "&altura="+Altura+
+                            "&peso="+Peso+
+                            "&talla="+Talla+
+                            "&sexo="+Sexo+
+                            "&fecharegistro="+FechaRegistro+
+                            "&estado="+EstadoAsesorado+
+                            "&identrenador="+IDEntrenadorRA+
+                            "&idrutina="+IdRutina+
+                            "&fechainicio="+FechaInicioR+
+                            "&fechafinalizacion="+FechaFinR;
+
                     JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
-                            Request.Method.GET, url , null, new Response.Listener<JSONObject>() {
+                            Request.Method.GET, urlLocal , null, new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {
                             new SweetAlertDialog(getActivity(), SweetAlertDialog.SUCCESS_TYPE).setTitleText("Asesorado registrado con éxito").show();

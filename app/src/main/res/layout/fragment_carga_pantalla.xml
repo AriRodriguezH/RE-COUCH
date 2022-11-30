@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.motion.widget.MotionLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:motion="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/motionLayout"
     android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    motion:layoutDescription="@xml/activity_main_scene_scene"
     tools:context=".cargaPantalla">
+<androidx.constraintlayout.motion.widget.MotionLayout
+    android:id="@+id/motionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    motion:layoutDescription="@xml/activity_main_scene_scene"
+   >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/backgroundLayout"
@@ -45,3 +49,4 @@
         />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>
+</FrameLayout>
