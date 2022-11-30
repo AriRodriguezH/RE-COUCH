@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/cargaPantalla">
+    app:startDestination="@id/loadingScreen">
     <fragment
         android:id="@+id/inicio"
         android:name="com.example.proyectoi.Inicio"
@@ -159,15 +159,15 @@
             app:destination="@id/rutinas" />
     </fragment>
     <fragment
-        android:id="@+id/cargaPantalla"
-        android:name="com.example.proyectoi.cargaPantalla"
-        android:label="fragment_carga_pantalla"
-        tools:layout="@layout/fragment_carga_pantalla" >
+        android:id="@+id/loadingScreen"
+        android:name="com.example.proyectoi.LoadingScreen"
+        android:label="fragment_loading_screen"
+        tools:layout="@layout/fragment_loading_screen" >
         <action
-            android:id="@+id/action_cargaPantalla_to_inicio"
+            android:id="@+id/action_loadingScreen_to_inicio"
             app:destination="@id/inicio" />
         <action
-            android:id="@+id/action_cargaPantalla_to_inMenu"
+            android:id="@+id/action_loadingScreen_to_inMenu"
             app:destination="@id/inMenu" />
     </fragment>
 </navigation>

@@ -95,8 +95,6 @@ public class inMenu extends Fragment {
         LinearLayout HistoricoA = view.findViewById(R.id.btnHisoricoA);
         LinearLayout InformeA = view.findViewById(R.id.btnInformeA);
 
-
-
         preferenceHelper = new PreferenceHelper(getContext());
 
         TextView correoo= view.findViewById(R.id.vercorreo);
