@@ -63,10 +63,7 @@ public class Inicio extends Fragment {
         Button IniciarSesion = view.findViewById(R.id.btnIniciaSesion);
         Button Registrar = view.findViewById(R.id.btnCrearCuenta);
         requestQueue = Volley.newRequestQueue(getActivity());
-
-
         reloadPreferencias();
-
 
         IniciarSesion.setOnClickListener(new View.OnClickListener() {
             @Override
