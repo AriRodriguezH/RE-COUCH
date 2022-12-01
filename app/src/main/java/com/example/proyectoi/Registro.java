@@ -221,7 +221,7 @@ public class Registro extends Fragment {
                             "&correo="+email+
                             "&contrasenia="+ Contrasenia;
 
-                    String urllocal="http://192.168.1.65/Alumno/insertEntrenador.php?nombre="+Nombre+
+                    String urllocal="http://192.168.0.101/Alumno/insertEntrenador.php?nombre="+Nombre+
                             "&apellidop="+ApellidoP+
                             "&apellidom="+ApellidoM+
                             "&fechanacimiento="+fechaNacimiento+

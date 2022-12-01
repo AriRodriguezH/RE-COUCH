@@ -72,7 +72,7 @@ public class historicoAsesorado extends Fragment {
         String IDEntrenador = IDUser.getText().toString();
 
         String url2 = "https://gdxblackstar.000webhostapp.com/spinerAsesorado.php?identrenador="+IDEntrenador;
-        String url2local = "http://192.168.1.65/Alumno/spinerAsesorado.php?identrenador="+IDEntrenador;
+        String url2local = "http://192.168.0.101/Alumno/spinerAsesorado.php?identrenador="+IDEntrenador;
         JsonObjectRequest jsonObjectRequest2 = new JsonObjectRequest(Request.Method.POST,
                 url2local, null, new Response.Listener<JSONObject>() {
             @Override
@@ -150,7 +150,7 @@ public class historicoAsesorado extends Fragment {
                             "&talla=" + TallaHA +
                             "&idasesorado=" + IDASESORADO;
 
-                    String urllocal = "http://192.168.1.65/Alumno/insertHistoricoasesorado.php?altura=" + AlturaHA +
+                    String urllocal = "http://192.168.0.101/Alumno/insertHistoricoasesorado.php?altura=" + AlturaHA +
                             "&peso=" + PesoHA +
                             "&talla=" + TallaHA +
                             "&idasesorado=" + IDASESORADO;
@@ -161,6 +161,9 @@ public class historicoAsesorado extends Fragment {
                         public void onResponse(JSONObject response) {
                             new SweetAlertDialog(getActivity(), SweetAlertDialog.SUCCESS_TYPE).setTitleText("Histórico Agregado").show();
                             //Toast.makeText(view.getContext(), response.toString(), Toast.LENGTH_LONG).show();
+                            Peso.setText("");
+                            Altura.setText("");
+                            Talla.setText("");
                             progressDialog.dismiss();
                         }
                     }, new Response.ErrorListener() {

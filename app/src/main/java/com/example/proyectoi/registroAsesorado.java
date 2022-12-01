@@ -86,7 +86,7 @@ public class registroAsesorado extends Fragment {
 
         /*SPINER FUNCIÓN*/
         String url2 = "https://gdxblackstar.000webhostapp.com/spinerRutina.php";
-        String urllocal2="http://192.168.1.65/Alumno/spinerRutina.php";
+        String urllocal2="http://192.168.0.101/Alumno/spinerRutina.php";
         JsonObjectRequest jsonObjectRequest2 = new JsonObjectRequest(Request.Method.POST,
                 urllocal2, null, new Response.Listener<JSONObject>() {
             @Override
@@ -343,7 +343,7 @@ public class registroAsesorado extends Fragment {
                             "&fechainicio="+FechaInicioR+
                             "&fechafinalizacion="+FechaFinR;
 
-                    String urlLocal="http://192.168.1.65/Alumno/insertAsesorado.php?nombre="+NombreRA+
+                    String urlLocal="http://192.168.0.101/Alumno/insertAsesorado.php?nombre="+NombreRA+
                             "&apellidop="+ApellidoPRA+
                             "&apellidom="+ApellidoMRA+
                             "&fechanacimiento="+fechaNacimientoRA+

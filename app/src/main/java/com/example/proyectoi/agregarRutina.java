@@ -204,7 +204,7 @@ public class agregarRutina extends Fragment {
         /*Funcion Sipners*/
 
         String urlMaquina = "https://gdxblackstar.000webhostapp.com/spinerMaquina.php";
-        String urlMaquinaLocal ="http://192.168.1.65/Alumno/spinerMaquina.php";
+        String urlMaquinaLocal ="http://192.168.0.101/Alumno/spinerMaquina.php";
         JsonObjectRequest jsonObjectRequest2 = new JsonObjectRequest(Request.Method.POST,
                 urlMaquinaLocal, null, new Response.Listener<JSONObject>() {
             @Override
@@ -654,7 +654,7 @@ public class agregarRutina extends Fragment {
                                 "&nombreejercicio3=" + NombreEjercio3L+
                                 "&nombreejercicio4=" + NombreEjercio4L;
 
-                        String urlocal = "http://192.168.1.65/Alumno/insertRutina.php?nombrerutina=" + miNombreRutina +
+                        String urlocal = "http://192.168.0.101/Alumno/insertRutina.php?nombrerutina=" + miNombreRutina +
                                 "&nivel=" + Nivel +
                                 "&parteatrabajar=" + parteTrabajarL +
                                 "&diasemana=" + lunes +
@@ -712,7 +712,7 @@ public class agregarRutina extends Fragment {
                                 "&nombreejercicio3=" + NombreEjercio3M+
                                 "&nombreejercicio4=" + NombreEjercio4M;
 
-                        String urllocal = "http://192.168.1.65/Alumno/insertRutina.php?nombrerutina=" + miNombreRutina +
+                        String urllocal = "http://192.168.0.101/Alumno/insertRutina.php?nombrerutina=" + miNombreRutina +
                                 "&nivel=" + Nivel +
                                 "&parteatrabajar=" + parteTrabajarM +
                                 "&diasemana=" + martes +
@@ -769,7 +769,7 @@ public class agregarRutina extends Fragment {
                                 "&nombreejercicio3=" + NombreEjercio3Mi+
                                 "&nombreejercicio4=" + NombreEjercio4Mi;
 
-                        String urlocal = "http://192.168.1.65/Alumno/insertRutina.php?nombrerutina=" + miNombreRutina +
+                        String urlocal = "http://192.168.0.101/Alumno/insertRutina.php?nombrerutina=" + miNombreRutina +
                                 "&nivel=" + Nivel +
                                 "&parteatrabajar=" + parteTrabajarMi +
                                 "&diasemana=" + miercoles +
@@ -826,7 +826,7 @@ public class agregarRutina extends Fragment {
                                 "&nombreejercicio3=" + NombreEjercio3J+
                                 "&nombreejercicio4=" + NombreEjercio4J;
 
-                        String urlocal = "http://192.168.1.65/Alumno/insertRutina.php?nombrerutina=" + miNombreRutina +
+                        String urlocal = "http://192.168.0.101/Alumno/insertRutina.php?nombrerutina=" + miNombreRutina +
                                 "&nivel=" + Nivel +
                                 "&parteatrabajar=" + parteTrabajarJ +
                                 "&diasemana=" + jueves +
@@ -883,7 +883,7 @@ public class agregarRutina extends Fragment {
                                 "&nombreejercicio3=" + NombreEjercio3V+
                                 "&nombreejercicio4=" + NombreEjercio4V;
 
-                        String urllocal = "http://192.168.1.65/Alumno/insertRutina.php?nombrerutina=" + miNombreRutina +
+                        String urllocal = "http://192.168.0.101/Alumno/insertRutina.php?nombrerutina=" + miNombreRutina +
                                 "&nivel=" + Nivel +
                                 "&parteatrabajar=" + parteTrabajarV +
                                 "&diasemana=" + viernes +
@@ -940,7 +940,7 @@ public class agregarRutina extends Fragment {
                                 "&nombreejercicio3=" + NombreEjercio3S+
                                 "&nombreejercicio4=" + NombreEjercio4S;
 
-                        String urlocal = "http://192.168.1.65/Alumno/insertRutina.php?nombrerutina=" + miNombreRutina +
+                        String urlocal = "http://192.168.0.101/Alumno/insertRutina.php?nombrerutina=" + miNombreRutina +
                                 "&nivel=" + Nivel +
                                 "&parteatrabajar=" + parteTrabajarS +
                                 "&diasemana=" + sabado +
@@ -997,7 +997,7 @@ public class agregarRutina extends Fragment {
                                 +"&nombreejercicio3=" + NombreEjercio3D+
                                 "&nombreejercicio4=" + NombreEjercio4D;
 
-                        String urlocal = "http://192.168.1.65/Alumno/insertRutina.php?nombrerutina=" + miNombreRutina +
+                        String urlocal = "http://192.168.0.101/Alumno/insertRutina.php?nombrerutina=" + miNombreRutina +
                                 "&nivel=" + Nivel +
                                 "&parteatrabajar=" + parteTrabajarD +
                                 "&diasemana=" + domingo +

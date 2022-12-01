@@ -98,7 +98,7 @@ public class consultarAsesorados extends Fragment {
         Log.i("IDUSER", IDENTRENADOR);
 
         String url="https://gdxblackstar.000webhostapp.com/getAsesorado.php?identrenador="+IDENTRENADOR;
-        String urllocal="http://192.168.1.65/Alumno/getAsesorado.php?identrenador="+IDENTRENADOR;
+        String urllocal="http://192.168.0.101/Alumno/getAsesorado.php?identrenador="+IDENTRENADOR;
         Log.e("URL", url);
         jsonObjectRequest=new JsonObjectRequest(Request.Method.GET, urllocal, null, new Response.Listener<JSONObject>() {
             @Override
@@ -133,15 +133,15 @@ public class consultarAsesorados extends Fragment {
 
                 } catch (JSONException e) {
                     e.printStackTrace();
-                    Toast.makeText(getContext(), "No se ha podido establecer conexión con el servidor" +
-                            " "+response, Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), "Usted no tiene asesorados registrados" , Toast.LENGTH_LONG).show();
                     progress.hide();
                 }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getContext(), "No se puede conectar "+error.toString(), Toast.LENGTH_LONG).show();
+                //Toast.makeText(getContext(), "No se puede conectar "+error.toString(), Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), "Usted no tiene asesorados registrados", Toast.LENGTH_LONG).show();
                 System.out.println();
                 Log.d("ERROR: ", error.toString());
                 progress.hide();

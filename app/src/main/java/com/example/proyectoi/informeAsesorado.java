@@ -152,7 +152,7 @@ public class informeAsesorado extends Fragment {
         String IdEntrenador = miIDEntrenador.getText().toString();
 
         String url="https://gdxblackstar.000webhostapp.com/getHistoricoasesorado.php?identrenador="+IdEntrenador;
-        String urllocal="http://192.168.1.65/Alumno/getHistoricoasesorado.php?identrenador="+IdEntrenador;
+        String urllocal="http://192.168.0.101/Alumno/getHistoricoasesorado.php?identrenador="+IdEntrenador;
 
         jsonObjectRequest=new JsonObjectRequest(Request.Method.GET, urllocal, (JSONObject) null, new Response.Listener<JSONObject>() {
             @Override

@@ -257,7 +257,7 @@ public class detallesAsesorado extends Fragment {
                 }else {
                     progressDialog.show();
                     String url="https://gdxblackstar.000webhostapp.com/updateAsesorado.php";
-                    String urlLocal="http://192.168.1.65/Alumno/updateasesorado.php";
+                    String urlLocal="http://192.168.0.101/Alumno/updateasesorado.php";
 
                     StringRequest stringRequest = new StringRequest(Request.Method.POST, urlLocal, new Response.Listener<String>() {
                         @Override
@@ -332,7 +332,7 @@ public class detallesAsesorado extends Fragment {
 
             private void EliminarAsesordo() {
                 String ureliminar = "https://gdxblackstar.000webhostapp.com/deleteAsesorado.php";
-                String urleliminarLocal="http://192.168.1.65/Alumno/deleteAsesorado.php";
+                String urleliminarLocal="http://192.168.0.101/Alumno/deleteAsesorado.php";
                 StringRequest stringRequest2 = new StringRequest(Request.Method.POST, urleliminarLocal, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

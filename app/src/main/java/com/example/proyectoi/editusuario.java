@@ -167,7 +167,7 @@ public class editusuario extends Fragment {
                     return;
                 }else {
                     new SweetAlertDialog( getActivity(), SweetAlertDialog.WARNING_TYPE).setTitleText("¿Deseas guardar los cambios?")
-                            .setContentText("Te aconsejamos anotar el correo y contraseña en caso de cambios realizados en ellos")
+                            .setContentText("Los cambios se realizaran al volver a iniciar sesión")
                             .setCancelText("No, cancelar acción")
                             .setConfirmText("Si, editar perfil")
                             .showCancelButton(true)
@@ -277,7 +277,7 @@ public class editusuario extends Fragment {
                 }else {
                     progressDialog.show();
                     String url="https://gdxblackstar.000webhostapp.com/updateEntrenador.php";
-                    String urllocal="http://192.168.1.65/Alumno/updateEntrenador.php";
+                    String urllocal="http://192.168.0.101/Alumno/updateEntrenador.php";
 
                     StringRequest stringRequest = new StringRequest(Request.Method.POST, urllocal, new Response.Listener<String>() {
                         @Override

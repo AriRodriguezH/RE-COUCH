@@ -8,8 +8,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_weight="1"
+    android:hapticFeedbackEnabled="true"
+    android:backgroundTintMode="multiply"
+    android:backgroundTint="@color/white"
+    android:background="@color/white"
     >
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:backgroundTintMode="multiply"
+        android:hapticFeedbackEnabled="true">
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -408,4 +419,5 @@
             android:textColor="@color/white" />
     </LinearLayout>
 </LinearLayout>
+    </RelativeLayout>
 </FrameLayout>
